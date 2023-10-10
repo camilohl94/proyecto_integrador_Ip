@@ -73,10 +73,12 @@ a:focus {
 
 .logo_box {
   width: 80px;
+  
 }
 
 .logo_box img {
   width: 100%;
+  border-radius: 100%;
 }
 
 .call_to_btn {
@@ -116,7 +118,7 @@ a:focus {
 .slider_section .carousel-indicators .active {
   width: 24px;
   height: 24px;
-  background-color: #2561db;
+  background-color: #0fa71b;
 }
 
 .carousel-control-prev,
@@ -146,7 +148,7 @@ a:focus {
   display: flex;
   position: relative;
   height: calc(100vh - 90px);
-  background-image: url(../images/reci-caneca.jpg);
+  background-image: url(../images/fondo-reci.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   
@@ -170,8 +172,8 @@ a:focus {
 .slider_section .slider_box .slider-detail {
   color: #0a021d;
   width: 60%;
-  margin-top: 14%;
-  margin-left: 20%;
+  margin-top: 5%;
+  margin-left: 15%;
 }
 
 .slider_section .slider_box .slider-detail .slider_detail-heading h2 {
@@ -300,22 +302,22 @@ a:focus {
 
 .service_img-container .service_img-box.i-box-1 {
   width: 60%;
-  background-image: url(../images/s-1.jpg);
+  background-image: url(../images/produc-sos1.jfif);
 }
 
 .service_img-container .service_img-box.i-box-2 {
   width: 40%;
-  background-image: url(../images/s-2.jpg);
+  background-image: url(../images/produc-sos2.jfif);
 }
 
 .service_img-container .service_img-box.i-box-3 {
   width: 40%;
-  background-image: url(../images/s-3.jpg);
+  background-image: url(../images/produc-sos3.jpg);
 }
 
 .service_img-container .service_img-box.i-box-4 {
   width: 60%;
-  background-image: url(../images/s-4.jpg);
+  background-image: url(../images/materareci.webp);
 }
 
 .service_section .service_img-container a,
