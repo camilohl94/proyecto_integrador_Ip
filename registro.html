@@ -48,22 +48,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto mr-2">
             <li class="nav-item active">
-              <a class="nav-link" href="index.html">Inicio<span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="index.html">inicio <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">Sobre Nosotros </a>
+              <a class="nav-link" href="about.html">Sobre Nosotros  </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="service.html">Registrase</a>
+              <a class="nav-link" href="registro.html">Registrarse</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="blog.html">Blog</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contacto</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Iniciar sesion </a>
+              <a class="nav-link" href="login.html">inicio de sesion </a>
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
@@ -76,39 +70,45 @@
     </div>
   </header>
   <!-- end header section -->
+<!-- inicio de formulario de registro -->
+<form id="registro-form" action="/procesar_registro.php" method="post">
+  <label for="nombre">Nombre:</label>
+  <input type="text" id="nombre" name="nombre" required>
+  
+  <label for="apellido">Apellido:</label>
+  <input type="text" id="apellido" name="apellido" required>
+  
+  <label for="correo">Correo Electrónico:</label>
+  <input type="email" id="correo" name="correo" required>
+  
+  <label for="contrasena">Contraseña:</label>
+  <input type="password" id="contrasena" name="contrasena" required>
+  
+  <label for="confirmar-contrasena">Confirmar Contraseña:</label>
+  <input type="password" id="confirmar-contrasena" name="confirmar-contrasena" required>
+  
+  <label for="telefono">Teléfono:</label>
+  <input type="tel" id="telefono" name="telefono">
+  
+  <label for="direccion">Dirección:</label>
+  <input type="text" id="direccion" name="direccion">
+  
+  <label for="ciudad">Ciudad:</label>
+  <input type="text" id="ciudad" name="ciudad">
+  
+  <!-- Puedes agregar más campos aquí -->
+  
+  <input type="submit" value="Registrarse">
+</form>
+<!-- fin formulario de registro -->
 
 
+  <!-- story section -->
+  <
 
-  <!-- contact section -->
-  <section class="contact_section layout_padding">
-    <div class="container-fluid">
-      <div class="row">
-        <div class=" col-md-6">
-          <div id="map" class="h-100 w-100 ">
-          </div>
-        </div>
-        <div class=" col-md-6 contact_form-container">
-          <div class="contact_box">
-            <form action="">
-              <input type="text" placeholder="Your Name">
-              <input type="email" placeholder="Email">
-              <input type="text" placeholder="Phone Number">
-              <input type="text" placeholder="Message">
-              <div>
-                <button type="submit">
-                  Submit
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
+  <!-- end story section -->
 
-    </div>
-    </div>
-  </section>
 
-  <!-- end contact section -->
 
   <!-- info section -->
   <section class="info_section layout_padding">
@@ -117,20 +117,19 @@
         <div class=" col-md-4 info_detail">
           <div>
             <p>
-              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-              in some form, by injected humour, or randomised words which don't look even slightly believable.
+              Reciclar es más que una acción, es el valor de la responsabilidad por preservar los recursos naturales.
             </p>
           </div>
         </div>
         <div class=" col-md-4 address_container">
           <div>
             <h3>
-              Address:
+              contacto:
             </h3>
             <div class="address_link-container">
               <a href="">
                 <img src="images/location.png" alt="">
-                <span> Address: 73 Canal Street, New York, NY
+                <span> Direccion :Bello: Diagonal 50a #38-20 (Tierragro)
                 </span>
               </a>
               <a href="">
@@ -141,7 +140,7 @@
               <a href="">
                 <img src="images/mail.png" alt="">
                 <span>
-                  Email: demo@gmail.com
+                  Email: jchernandezlo@cesde.net
                 </span>
               </a>
             </div>
@@ -151,14 +150,14 @@
           <div>
             <div>
               <h3>
-                newsletter
+               Boletin informativo
 
               </h3>
               <form action="">
-                <input type="email" placeholder="ENTER YOUR EMAIL">
+                <input type="email" placeholder="Ingresa tu correo electronico">
                 <div>
                   <button type="submit">
-                    Subscribe
+                    Subscribirse
                   </button>
                 </div>
               </form>
@@ -182,7 +181,6 @@
       </div>
     </div>
   </section>
-
   <!-- end info section -->
 
 
@@ -244,33 +242,7 @@
     });
   </script>
 
-  <script>
-    // This example adds a marker to indicate the position of Bondi Beach in Sydney,
-    // Australia.
-    function initMap() {
-      var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 11,
-        center: {
-          lat: 40.645037,
-          lng: -73.880224
-        },
-      });
 
-      var image = 'images/maps-and-flags.png';
-      var beachMarker = new google.maps.Marker({
-        position: {
-          lat: 40.645037,
-          lng: -73.880224
-        },
-        map: map,
-        icon: image
-      });
-    }
-  </script>
-  <!-- google map js -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap">
-  </script>
-  <!-- end google map js -->
 
 </body>
 
