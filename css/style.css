@@ -19,7 +19,7 @@ body {
 
 .header_section {
   font-family: "Roboto", sans-serif;
-  background-color: #1f233e;
+  background-color: #21610B;
   color: #fff;
   min-height: 90px;
   padding: 1% 0;
@@ -165,14 +165,14 @@ a:focus {
   width: 12px;
   text-align: center;
   word-break: break-word;
-  color: #034406fb;
+  color: #0b0e0bfb;
   text-transform: uppercase;
 }
 
 .slider_section .slider_box .slider-detail {
   color: #0a021d;
   width: 60%;
-  margin-top: 5%;
+  margin-top: 1%;
   margin-left: 15%;
 }
 
@@ -198,7 +198,7 @@ a:focus {
 .slider_section .slider_box .slider-detail .slider_detail-btn a {
   margin-top: 28px;
   padding: 16px 20px;
-  background-color: #2561db;
+  background-color: #21610B;
   color: #fff;
 }
 
@@ -224,7 +224,7 @@ a:focus {
 
 .welcome_detail h3 {
   text-transform: uppercase;
-  color: #254a93;
+  color: #21610B;
   position: relative;
 }
 
@@ -271,7 +271,7 @@ a:focus {
 
 .service_detail h3 {
   text-transform: uppercase;
-  color: #254a93;
+  color: #21610B;
   position: relative;
 }
 
@@ -319,10 +319,14 @@ a:focus {
   width: 60%;
   background-image: url(../images/materareci.webp);
 }
+.service_img-container .service_img-box.i-box-5 {
+  width: 60%;
+  background-image: url(../images/tecla-madera.jpg);
+}
 
 .service_section .service_img-container a,
 .service_section .service_img-container a:hover {
-  color: #fff;
+  color: #bad0ee;
   text-transform: uppercase;
   padding: 15px 40px;
 }
@@ -332,7 +336,7 @@ a:focus {
 }
 
 .service_section .service_img-container .service_img-box:hover a {
-  background-color: #2561db;
+  background-color: #21610B;
 }
 
 .service_btn {
@@ -368,7 +372,7 @@ a:focus {
 
 .security_section h3 {
   text-transform: uppercase;
-  color: #254a93;
+  color: #21610B;
   position: relative;
   text-align: center;
 }
@@ -401,16 +405,17 @@ a:focus {
 }
 
 .security_section .security_img-box.i-box-1 {
-  background-image: url(../images/security-1.jpg);
+  background-image: url(../images/obj-reci5.jpg);
 }
 
 .security_section .security_img-box.i-box-2 {
-  background-image: url(../images/security-2.jpg);
+  background-image: url(../images/obj-reci4.jpg);
 }
 
 .security_section .security_img-box.i-box-3 {
-  background-image: url(../images/security-3.jpg);
+  background-image: url(../images/obj-reci3.jpg);
 }
+
 
 .security_section .security_img-box a {
   display: none;
@@ -455,7 +460,7 @@ a:focus {
 .owl-carousel .owl-nav .owl-prev {
   position: absolute;
   top: 50%;
-  background-color: #254a93;
+  background-color: #21610B;
   width: 70px;
   height: 40px;
   background-repeat: no-repeat;
@@ -505,7 +510,7 @@ a:focus {
 
 .story_detail h3 {
   text-transform: uppercase;
-  color: #254a93;
+  color: #21610B;
 
   margin: 0;
 }
@@ -530,7 +535,7 @@ a:focus {
 }
 
 .contact_form-container {
-  background-image: url(../images/guards.jpg);
+  background-image: url(../images/fondo-reci1.jpg);
 }
 
 .contact_form-container form {
@@ -560,7 +565,7 @@ a:focus {
 
 .contact_form-container form button {
   border: none;
-  background-color: #254a93;
+  background-color: #21610B;
   color: #fff;
   padding: 8px 20px;
   margin-top: 15px;
@@ -574,7 +579,7 @@ a:focus {
 
 /* info section */
 .info_section {
-  background-color: #000202;
+  background-color: #0c1a11;
   font-family: "Roboto", sans-serif;
 }
 
@@ -622,7 +627,7 @@ a:focus {
 
 .info_section .news_container form button {
   border: none;
-  background-color: #254a93;
+  background-color: #21610B;
   color: #fff;
   font-size: 14px;
   padding: 8px 15px;
@@ -644,7 +649,7 @@ a:focus {
 /* footer section*/
 
 .footer_section {
-  background-color: #254a93;
+  background-color: #21610B;
   padding: 20px 0;
   font-family: "Roboto", sans-serif;
 }
