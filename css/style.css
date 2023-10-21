@@ -670,7 +670,7 @@ a:focus {
 
 /* inicio stylos formularios de registro */
 #registro-form {
-  max-width: 400px;
+  max-width: 80%;
   margin: 20px auto;
   padding: 20px;
   background-color: white;
