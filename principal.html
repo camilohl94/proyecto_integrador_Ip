@@ -28,18 +28,25 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
+  <link rel="stylesheet" href="principal.css">
+  <script src="script.js"></script>
+ 
 </head>
 
 <body>
-  <!-- header section strats -->
   <header class="header_section">
     <div class="container">
       <nav class="navbar navbar-expand-lg custom_nav-container ">
         <a class="navbar-brand" href="#">
           <div class="logo_box">
-            <img src="images/logo.png" alt="" />
+            <img src="images/imagen mi  mindo verde.jpg" alt="" />
           </div>
         </a>
+        <a class="navbar-brand" href="#">
+        <div  >
+          <h1>Mi mundo verde</h1>
+        </div>
+      </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -48,145 +55,144 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto mr-2">
             <li class="nav-item active">
-              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="index.html">Servicios<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About Us </a>
+              <a class="nav-link" href="#recicla">Reciclemos </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="service.html">Services</a>
+              <a class="nav-link" href="#formulario recogida">Recogida de basuras</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="blog.html">Blog</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Login </a>
+              <a class="nav-link" href="login.html">Seminarios</a>
             </li>
           </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control nav_search-input mr-sm-2 d-none" type="search" placeholder="Search"
-              aria-label="Search" value="" />
-            <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
-          </form>
         </div>
       </nav>
     </div>
   </header>
   <!-- end header section -->
 
-
-
-
-
-  <!-- service section -->
- 
-  <!-- end service section -->
-
-  <!-- security section -->
-
-  <section class="security_section layout_padding">
-    <h3>
-      Security
-
-
-    </h3>
-    <h2>
-     Nuestros productos.
-    </h2>
-    <div class="security_container">
-      <div class="carousel-wrap">
-        <div class="owl-carousel">
-          <div class="item">
-            <div class="security_img-box i-box-1">
-              <a href=""> ver mas</a>
-            </div>
-          </div>
-          <div class="item">
-            <div class="security_img-box i-box-2">
-              <a href=""> ver mas </a>
-            </div>
-          </div>
-          <div class="item">
-            <div class="security_img-box i-box-3">
-              <a href="">ver mas </a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <div class="security_btn">
-      <a href="">
-        <span>
-          Read More
-        </span>
-        <img src="images/arrow-black.png" alt="" class="ml-2" />
-      </a>
-    </div>
-  </section>
-  <!-- end security section -->
-
-
-
-
-
-
-  <!-- info section -->
-  <section class="contact_section layout_padding-top">
-    <div class="container-fluid">
-      <div class="row">
-        <div class=" col-md-6">
-          <div id="map" class="h-100 w-100 ">
-          </div>
-        </div>
-        <div class=" col-md-6 contact_form-container">
-          <div class="contact_box">
-            <form action="">
-              <input type="text" placeholder="Nombre">
-              <input type="email" placeholder="Correo electronico">
-              <input type="text" placeholder="Numero de telefono">
-              <input type="text" placeholder="Mensaje">
-              <div>
-                <button type="submit">
-                  Enviar
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    </div>
-  </section>
-
-  <!-- end contact section -->
-
-  
-    
   <h2>Nuestros Productos Sostenibles</h2>
   <div class="productos-container">
     <div class="producto">
-    <img src="images/obj-reci1.jpg" alt="Producto 1">
-    <h3>Producto 1</h3>
-    <p>Descripción del producto 1. Precio: $XX.XX</p>
-    <button>Añadir al carrito</button>
-  </div>
+      <img src="images/tecla-madera.jpg" alt="Producto 1">
+      <h3>teclado</h3>
+      <p>Teclado de madera maigable con el medio ambiente. Precio: $200.000</p>
+      <button>Añadir al carrito</button>
+    </div>
     <div class="producto">
-      <img src="images/obj-reci2.jpg" alt="Producto 2">
+      <img src="images/obj-reci2.jpg" alt="Producto 1">
+      <h3>Canasta</h3>
+      <p>Canasta hecha con tapas . Precio: $500.000</p>
+      <button>Añadir al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="images/obj-reci1.jpg" alt="Producto 2">
       <h3>Producto 2</h3>
       <p>Descripción del producto 2. Precio: $XX.XX</p>
       <button>Añadir al carrito</button>
+    </div>
   </div>
+
+<div id="recicla">
+  <h1>Reciclemos </h1>
+  <input type="text" id="searchInput" placeholder="Ingresa un producto">
+  <button onclick="buscarReciclaje()">Buscar</button>
+  <div id="result"></div>
+
 </div>
-  
- 
-  
-  
-  <!-- Repite esta estructura para otros productos -->
+<section class="welcome_section layout_padding">
+  <div class="container-fluid">
+    <div class="row">
+      <div class=" col-md-6">
+        <div>
+          <video controls>
+            <source src="https://media.istockphoto.com/id/1311034774/es/v%C3%ADdeo/timelapce-de-reciclaje-de-basura-papel-de-clasificaci%C3%B3n-pl%C3%A1stico-frascos-separaci%C3%B3n-de.mp4?s=mp4-640x640-is&k=20&c=Uufk_3V8tojdxaPPTy5xdnj-QedaeDaIZu4qTCmk1d4=" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class=" col-md-6">
+        <div class="welcome_detail">
+          <h3>
+            Regla de las "3R"
+          </h3>
+
+          <ul>
+            <li><strong>Reducir:</strong> acciones para reducir la producción de objetos susceptibles de convertirse
+              en residuos, con medidas de compra racional, uso adecuado de los productos, compra de productos
+              sostenibles.</li>
+            <li><strong>Reciclar:</strong> el conjunto de operaciones de recogida y tratamiento de residuos que
+              permiten reintroducirlos en un ciclo de vida. Se utiliza la separación de residuos en origen para
+              facilitar los canales adecuados.</li>
+            <li><strong>Reutilizar:</strong>acciones que permiten el volver a usar un determinado producto para darle
+              una segunda vida, con el mismo uso u otro diferente. Medidas encaminadas a la reparación de productos y
+              alargar su vida útil.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end las 3r section -->
+<h1>Bienvenido a nuestros Seminarios de Reciclaje</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#seminario1">Seminario 1</a></li>
+            <li><a href="#seminario2">Seminario 2</a></li>
+        </ul>
+    </nav>
+
+    <section id="seminario1" class="seminario">
+        <h2>Seminario 1: Título del Seminario</h2>
+        <p>Descripción del Seminario 1.</p>
+        <p>Fecha: [Fecha del Seminario]</p>
+        <p>Hora: [Hora del Seminario]</p>
+        <p>Lugar: [Lugar del Seminario]</p>
+        <a href="formulario_registro_seminario1.html">Regístrate</a>
+    </section>
+
+    <section id="seminario2" class="seminario">
+        <h2>Seminario 2: Título del Seminario</h2>
+        <p>Descripción del Seminario 2.</p>
+        <p>Fecha: [Fecha del Seminario]</p>
+        <p>Hora: [Hora del Seminario]</p>
+        <p>Lugar: [Lugar del Seminario]</p>
+        <a href="formulario_registro_seminario2.html">Regístrate</a>
+    </section>
+
+  <div id="formulario recogida"></div>
+  <h1>Formulario de Recogida de Basuras</h1>
+    <form action="procesar_formulario.php" method="post">
+        <label for="cantidad">Cantidad de Basura:</label>
+        <input type="text" id="cantidad" name="cantidad" required><br>
+
+        <label for="tipo">Tipo de Basura:</label>
+        <select id="tipo" name="tipo" required>
+            <option value="Residuos Sólidos">Residuos Sólidos</option>
+            <option value="Basura Orgánica">Basura Orgánica</option>
+            <option value="Plástico">Plástico</option>
+            <option value="Vidrio">Vidrio</option>
+        </select><br>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br>
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required><br>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required><br>
+
+        <label for="direccion">Dirección:</label>
+        <textarea id="direccion" name="direccion" required></textarea><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+
   <!-- info section -->
   <section class="info_section layout_padding">
     <div class="container">
@@ -227,7 +233,7 @@
           <div>
             <div>
               <h3>
-               Boletin informativo
+                Boletin informativo
 
               </h3>
               <form action="">
@@ -265,12 +271,25 @@
   <!-- footer section -->
   <section class="container-fluid footer_section">
     <p>
-      Copyright &copy; 2019 All Rights Reserved By
-      <a href="https://html.design/">Free Html Templates</a>
+      Copyright &copy; 2023 Mi mundo verde.
     </p>
   </section>
   <!-- footer section -->
 
+ <script src="script.js"></script>
+  <script>
+    // JavaScript para mostrar y ocultar el select al hacer clic en el label
+    const labelServicios = document.getElementById('labelServicios');
+    const select = document.getElementById('selecciona');
+
+    labelServicios.addEventListener('click', () => {
+      if (select.style.display === 'none') {
+        select.style.display = 'block'; // Muestra el select al hacer clic en el label
+      } else {
+        select.style.display = 'none'; // Oculta el select al hacer clic nuevamente en el label
+      }
+    });
+  </script>
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js">
@@ -303,16 +322,16 @@
         event.preventDefault();
         $(".nav_search-input")
           .animate({
-              left: "-1000px"
-            },
+            left: "-1000px"
+          },
             "1000000"
           )
           .removeClass("d-none");
       } else {
         $(".nav_search-input")
           .animate({
-              left: "0px"
-            },
+            left: "0px"
+          },
             "1000000"
           )
           .addClass("d-none");
