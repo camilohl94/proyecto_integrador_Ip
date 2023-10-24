@@ -61,7 +61,7 @@
               <a class="nav-link" href="#recicla">Reciclemos </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#formulario recogida">Recogida de basuras</a>
+              <a class="nav-link" href="#formulario_recogida">Recogida de basuras</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="login.html">Seminarios</a>
@@ -107,9 +107,7 @@
     <div class="row">
       <div class=" col-md-6">
         <div>
-          <video controls>
-            <source src="https://media.istockphoto.com/id/1311034774/es/v%C3%ADdeo/timelapce-de-reciclaje-de-basura-papel-de-clasificaci%C3%B3n-pl%C3%A1stico-frascos-separaci%C3%B3n-de.mp4?s=mp4-640x640-is&k=20&c=Uufk_3V8tojdxaPPTy5xdnj-QedaeDaIZu4qTCmk1d4=" type="video/mp4">
-          </video>
+         <img src="images/produc-sos2.jfif" alt="">
         </div>
       </div>
       <div class=" col-md-6">
@@ -135,40 +133,12 @@
   </div>
 </section>
 <!-- end las 3r section -->
-<h1>Bienvenido a nuestros Seminarios de Reciclaje</h1>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="#seminario1">Seminario 1</a></li>
-            <li><a href="#seminario2">Seminario 2</a></li>
-        </ul>
-    </nav>
-
-    <section id="seminario1" class="seminario">
-        <h2>Seminario 1: Título del Seminario</h2>
-        <p>Descripción del Seminario 1.</p>
-        <p>Fecha: [Fecha del Seminario]</p>
-        <p>Hora: [Hora del Seminario]</p>
-        <p>Lugar: [Lugar del Seminario]</p>
-        <a href="formulario_registro_seminario1.html">Regístrate</a>
-    </section>
-
-    <section id="seminario2" class="seminario">
-        <h2>Seminario 2: Título del Seminario</h2>
-        <p>Descripción del Seminario 2.</p>
-        <p>Fecha: [Fecha del Seminario]</p>
-        <p>Hora: [Hora del Seminario]</p>
-        <p>Lugar: [Lugar del Seminario]</p>
-        <a href="formulario_registro_seminario2.html">Regístrate</a>
-    </section>
-
-  <div id="formulario recogida"></div>
-  <h1>Formulario de Recogida de Basuras</h1>
+  <div id="formulario_recogida">
+  <h1 class="titulo1">Formulario de Recogida de Basuras</h1>
     <form action="procesar_formulario.php" method="post">
         <label for="cantidad">Cantidad de Basura:</label>
         <input type="text" id="cantidad" name="cantidad" required><br>
-
+        
         <label for="tipo">Tipo de Basura:</label>
         <select id="tipo" name="tipo" required>
             <option value="Residuos Sólidos">Residuos Sólidos</option>
@@ -177,20 +147,21 @@
             <option value="Vidrio">Vidrio</option>
         </select><br>
 
-        <label for="nombre">Nombre:</label>
+        <label for="nombre">Nombres y apellidos:</label>
         <input type="text" id="nombre" name="nombre" required><br>
-
-        <label for="apellido">Apellido:</label>
-        <input type="text" id="apellido" name="apellido" required><br>
-
         <label for="telefono">Teléfono:</label>
         <input type="tel" id="telefono" name="telefono" required><br>
+        <label for="direccion">Direccion:</label>
+        <input type="text" id="direccion" name="direccion" required><br>
 
-        <label for="direccion">Dirección:</label>
+        <label for="direccion">Mensaje:</label>
         <textarea id="direccion" name="direccion" required></textarea><br>
 
         <input type="submit" value="Enviar">
     </form>
+  </div>
+
+
 
 
   <!-- info section -->

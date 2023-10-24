@@ -4439,9 +4439,9 @@ function getURL() { window.location.href; } var protocol = location.protocol; $.
 
 
 const datosReciclaje = {
-  "banano": "Reciclar en la caneca verde.",
-  "tarro de agua": "Reciclar en la caneca blanca.",
-  "servilleta": "Reciclar en la caneca negra.",
+  "banano": "la caneca verde.",
+  "tarro de agua": "la caneca blanca.",
+  "servilleta": "la caneca negra.",
   // Agrega más productos y sus instrucciones de reciclaje aquí
 };
 
