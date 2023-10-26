@@ -4,6 +4,7 @@ select{
     margin: 0;
     padding: 5px;
     width: 80%;
+	border:none;
     
 }
 
@@ -12,15 +13,17 @@ select option{
     color: black;
     font-size: 16px;
     vertical-align: middle;
+	border:none;
     
    }
 #formulario_recogida{
-    width:100%;
-	padding:16px;
+    width:80%;
+	padding:50px;
 	border-radius:10px;
-	margin: 10px;;
-	background-color:#ccc;
+	margin: 0 auto 20px;
+	background-color:#f5f7f7;
     box-shadow: 2px 2px 2px gray;
+	border:none;
     
    
 }
@@ -28,14 +31,14 @@ form label{
 	width:100%;
 	font-weight:bold;
     display: inline-block;
+	border:none;
 
 }
 textarea{
 	width:80%;
 	height:100px;
-	border:1px solid #f6f6f6;
 	border-radius:3px;
-	background-color:#f6f6f6;			
+	background-color:white;			
 	margin:8px 0;
 	resize:none;
 	display:block;
@@ -48,7 +51,7 @@ form input[type="submit"]{
 	border:none;
 	border-radius:5px;
 	display:block;
-	color:#fff;
+	color:#f9fefe;
 	background-color:#10701d;
 } 
 form input[type="text"]{
@@ -59,7 +62,23 @@ form input[type="tel"]{
 }
 .titulo1{
     text-align: center;
-    color: #10701d;
+    color: #123517;
     font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
 }
 /* fin seccion de estilo del formulario */
+
+/* /* estilo para el buscador recila */
+#recicla{
+	text-align: center;
+	color: rgb(11, 31, 11);
+	background-image: url(images/fondo-buscador.jpg);
+	padding: 20px;
+	font-size: 21px;
+	margin-top: 20px;
+}
+
+/* fin de estilo para el buscador recicla */ 
+
+
+

@@ -72,9 +72,18 @@
     </div>
   </header>
   <!-- end header section -->
+  <div id="recicla">
+    <h1>Reciclemos </h1>
+    <input type="text" id="searchInput" placeholder="Ingresa un producto">
+    <button onclick="buscarReciclaje()">Buscar</button>
+    <div id="result"></div>
+  </div>
 
-  <h2>Nuestros Productos Sostenibles</h2>
+ 
   <div class="productos-container">
+    <div class="title">
+      <h2>Nuestros Productos Sostenibles</h2><br>
+    </div>
     <div class="producto">
       <img src="images/tecla-madera.jpg" alt="Producto 1">
       <h3>teclado</h3>
@@ -95,44 +104,7 @@
     </div>
   </div>
 
-<div id="recicla">
-  <h1>Reciclemos </h1>
-  <input type="text" id="searchInput" placeholder="Ingresa un producto">
-  <button onclick="buscarReciclaje()">Buscar</button>
-  <div id="result"></div>
 
-</div>
-<section class="welcome_section layout_padding">
-  <div class="container-fluid">
-    <div class="row">
-      <div class=" col-md-6">
-        <div>
-         <img src="images/produc-sos2.jfif" alt="">
-        </div>
-      </div>
-      <div class=" col-md-6">
-        <div class="welcome_detail">
-          <h3>
-            Regla de las "3R"
-          </h3>
-
-          <ul>
-            <li><strong>Reducir:</strong> acciones para reducir la producción de objetos susceptibles de convertirse
-              en residuos, con medidas de compra racional, uso adecuado de los productos, compra de productos
-              sostenibles.</li>
-            <li><strong>Reciclar:</strong> el conjunto de operaciones de recogida y tratamiento de residuos que
-              permiten reintroducirlos en un ciclo de vida. Se utiliza la separación de residuos en origen para
-              facilitar los canales adecuados.</li>
-            <li><strong>Reutilizar:</strong>acciones que permiten el volver a usar un determinado producto para darle
-              una segunda vida, con el mismo uso u otro diferente. Medidas encaminadas a la reparación de productos y
-              alargar su vida útil.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- end las 3r section -->
   <div id="formulario_recogida">
   <h1 class="titulo1">Formulario de Recogida de Basuras</h1>
     <form action="procesar_formulario.php" method="post">

@@ -244,7 +244,7 @@ color: #f6fdfe;
   content: "";
   height: 1.5px;
   width: 140px;
-  background-color: #36bb25;
+  background-color: #134611;
 }
 
 .welcome_detail h2,
@@ -260,8 +260,8 @@ color: #f6fdfe;
   color: #0c0b09;
 }
 
-.welcome_section .welcome_detail-btn a video {
-  width: 100%;
+.welcome_section .welcome_detail-btn a img {
+  width: 10%;
   height: 80%;
 }
 
@@ -452,6 +452,7 @@ color: #f6fdfe;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  
 }
 
 .contact_form-container .contact_box {
@@ -690,6 +691,15 @@ input[type="password"] {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  
+}
+.title{
+  text-align: center;
+  display: inline-block;
+  position:absolute;
+  margin-bottom: 60px;
+  color: #123a16;
+
 }
 
 .producto {
@@ -698,9 +708,11 @@ input[type="password"] {
     text-align: center;
     background-color: #fff;
     padding: 20px;
-    margin: 10px;
+    margin: 50px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+
    
 }
 
@@ -710,7 +722,7 @@ input[type="password"] {
 }
 
 button {
-    background-color: #e6ecf0;
+    background-color: #154f0e;
     color: #fff;
     padding: 5px 10px;
     border: none;
