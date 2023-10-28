@@ -30,56 +30,69 @@
   <link href="css/responsive.css" rel="stylesheet" />
   <link rel="stylesheet" href="principal.css">
   <script src="script.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
  
 </head>
 
 <body>
-  <header class="header_section">
-    <div class="container">
-      <nav class="navbar navbar-expand-lg custom_nav-container ">
-        <a class="navbar-brand" href="#">
-          <div class="logo_box">
-            <img src="images/imagen mi  mindo verde.jpg" alt="" />
+   <!-- encabezado -->
+  <section>
+    <nav x-data="{ isOpen: false }" class="relative bg-white shadow dark:bg-gray-800">
+      <div class="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
+          <div class="flex items-center justify-between">
+              <a href="#">
+                  <img class="w-40 " src="images/logo_mmv.png" alt="">
+              </a>
+  
+              <!-- Mobile menu button -->
+              <div class="flex lg:hidden">
+                  <button x-cloak @click="isOpen = !isOpen" type="button" class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="toggle menu">
+                      <svg x-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
+                      </svg>
+              
+                      <svg x-show="isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                  </button>
+              </div>
           </div>
-        </a>
-        <a class="navbar-brand" href="#">
-        <div  >
-          <h1>Mi mundo verde</h1>
-        </div>
-      </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+  
+          <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+          <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']" class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white dark:bg-gray-800 md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center">
+              <div class="flex flex-col md:flex-row md:mx-6">
+                  <a class="my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0" href="principal.html">Inicio</a>
+                  <a class="my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0" href="#recoge">Recogida de residuos</a>
+                  <a class="my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0" href="#reciclemos">Reciclemos</a>
+                  <a class="my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0" href="#">About</a>
+              </div>
+  
+              <div class="flex justify-center md:block">
+                  <a class="relative text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-300" href="#tienda">
+                      <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M3 3H5L5.4 5M7 13H17L21 5H5.4M7 13L5.4 5M7 13L4.70711 15.2929C4.07714 15.9229 4.52331 17 5.41421 17H17M17 17C15.8954 17 15 17.8954 15 19C15 20.1046 15.8954 21 17 21C18.1046 21 19 20.1046 19 19C19 17.8954 18.1046 17 17 17ZM9 19C9 20.1046 8.10457 21 7 21C5.89543 21 5 20.1046 5 19C5 17.8954 5.89543 17 7 17C8.10457 17 9 17.8954 9 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+  
+                      <span class="absolute top-0 left-0 p-1 text-xs text-white bg-blue-500 rounded-full"></span>
+                  </a>
+              </div>
+          </div>
+      </div>
+  </nav>
+  </section>
+  <!-- fin encabezado -->
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto mr-2">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html">Servicios<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#recicla">Reciclemos </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#formulario_recogida">Recogida de basuras</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="login.html">Seminarios</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-  </header>
-  <!-- end header section -->
-  <div id="recicla">
-    <h1>Reciclemos </h1>
-    <input type="text" id="searchInput" placeholder="Ingresa un producto">
-    <button onclick="buscarReciclaje()">Buscar</button>
+  <section id="reciclemos">
+  <div class="bg-no-repeat bg-cover bg-center p-4 rounded-lg text-center" style="background-image: url(images/fondo_buscador.webp);">
+    <h1 class="text-xl font-semibold">Reciclemos </h1>
+    <input type="text" id="searchInput" placeholder="Ingresa un producto" class="w-full px-4 py-2 rounded-lg focus:outline-none">
+    <button onclick="buscarReciclaje()" class="bg-green-700 text-white px-4 ru">Buscar</button>
     <div id="result"></div>
   </div>
+  </section>
 
- 
+
+ <section id="tienda">
   <div class="productos-container">
     <div class="title">
       <h2>Nuestros Productos Sostenibles</h2><br>
@@ -103,36 +116,198 @@
       <button>Añadir al carrito</button>
     </div>
   </div>
+</section>
+
+<!-- formulario recogida de basuras -->
+
+<section class="bg-white" id="recoge">
+  <div class="lg:grid lg:min-h-screen lg:grid-cols-12">
+    <section
+      class="relative flex h-32 items-end bg-gray-900 lg:col-span-5 lg:h-full xl:col-span-6"
+    >
+      <img
+        alt="Night"
+        src="images/formulario_recogida.jpg"
+        class="absolute inset-0 h-full w-full object-cover opacity-60"
+      />
+
+      <div class="hidden lg:relative lg:block lg:p-12">
+        <a class="block text-white" href="/">
+          <span class="sr-only">Home</span>
+          <svg
+            class="h-8 sm:h-10"
+            viewBox="0 0 28 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0.41 10.3847C1.14777 7.4194 2.85643 4.7861 5.2639 2.90424C7.6714 1.02234 10.6393 0 13.695 0C16.7507 0 19.7186 1.02234 22.1261 2.90424C24.5336 4.7861 26.2422 7.4194 26.98 10.3847H25.78C23.7557 10.3549 21.7729 10.9599 20.11 12.1147C20.014 12.1842 19.9138 12.2477 19.81 12.3047H19.67C19.5662 12.2477 19.466 12.1842 19.37 12.1147C17.6924 10.9866 15.7166 10.3841 13.695 10.3841C11.6734 10.3841 9.6976 10.9866 8.02 12.1147C7.924 12.1842 7.8238 12.2477 7.72 12.3047H7.58C7.4762 12.2477 7.376 12.1842 7.28 12.1147C5.6171 10.9599 3.6343 10.3549 1.61 10.3847H0.41ZM23.62 16.6547C24.236 16.175 24.9995 15.924 25.78 15.9447H27.39V12.7347H25.78C24.4052 12.7181 23.0619 13.146 21.95 13.9547C21.3243 14.416 20.5674 14.6649 19.79 14.6649C19.0126 14.6649 18.2557 14.416 17.63 13.9547C16.4899 13.1611 15.1341 12.7356 13.745 12.7356C12.3559 12.7356 11.0001 13.1611 9.86 13.9547C9.2343 14.416 8.4774 14.6649 7.7 14.6649C6.9226 14.6649 6.1657 14.416 5.54 13.9547C4.4144 13.1356 3.0518 12.7072 1.66 12.7347H0V15.9447H1.61C2.39051 15.924 3.154 16.175 3.77 16.6547C4.908 17.4489 6.2623 17.8747 7.65 17.8747C9.0377 17.8747 10.392 17.4489 11.53 16.6547C12.1468 16.1765 12.9097 15.9257 13.69 15.9447C14.4708 15.9223 15.2348 16.1735 15.85 16.6547C16.9901 17.4484 18.3459 17.8738 19.735 17.8738C21.1241 17.8738 22.4799 17.4484 23.62 16.6547ZM23.62 22.3947C24.236 21.915 24.9995 21.664 25.78 21.6847H27.39V18.4747H25.78C24.4052 18.4581 23.0619 18.886 21.95 19.6947C21.3243 20.156 20.5674 20.4049 19.79 20.4049C19.0126 20.4049 18.2557 20.156 17.63 19.6947C16.4899 18.9011 15.1341 18.4757 13.745 18.4757C12.3559 18.4757 11.0001 18.9011 9.86 19.6947C9.2343 20.156 8.4774 20.4049 7.7 20.4049C6.9226 20.4049 6.1657 20.156 5.54 19.6947C4.4144 18.8757 3.0518 18.4472 1.66 18.4747H0V21.6847H1.61C2.39051 21.664 3.154 21.915 3.77 22.3947C4.908 23.1889 6.2623 23.6147 7.65 23.6147C9.0377 23.6147 10.392 23.1889 11.53 22.3947C12.1468 21.9165 12.9097 21.6657 13.69 21.6847C14.4708 21.6623 15.2348 21.9135 15.85 22.3947C16.9901 23.1884 18.3459 23.6138 19.735 23.6138C21.1241 23.6138 22.4799 23.1884 23.62 22.3947Z"
+              fill=""
+            />
+          </svg>
+        </a>
+
+        <h2 class="mt-6 text-2xl font-bold text-white sm:text-3xl md:text-4xl">
+          Recogida de baSuras
+        </h2>
+
+        <p class="mt-4 leading-relaxed text-white/90">
+          El reciclaje es una práctica individual que, sin embargo, adoptada por millones de personas a la vez puede generar enormes beneficios para el planeta.
+        </p>
+      </div>
+    </section>
+
+    <main
+      class="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:px-16 lg:py-12 xl:col-span-6"
+    >
+      <div class="max-w-xl lg:max-w-3xl">
+        <div class="relative -mt-16 block lg:hidden">
+          <a
+            class="inline-flex h-16 w-16 items-center justify-center rounded-full bg-white text-blue-600 sm:h-20 sm:w-20"
+            href="/"
+          >
+            <span class="sr-only">Home</span>
+            <svg
+              class="h-8 sm:h-10"
+              viewBox="0 0 28 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0.41 10.3847C1.14777 7.4194 2.85643 4.7861 5.2639 2.90424C7.6714 1.02234 10.6393 0 13.695 0C16.7507 0 19.7186 1.02234 22.1261 2.90424C24.5336 4.7861 26.2422 7.4194 26.98 10.3847H25.78C23.7557 10.3549 21.7729 10.9599 20.11 12.1147C20.014 12.1842 19.9138 12.2477 19.81 12.3047H19.67C19.5662 12.2477 19.466 12.1842 19.37 12.1147C17.6924 10.9866 15.7166 10.3841 13.695 10.3841C11.6734 10.3841 9.6976 10.9866 8.02 12.1147C7.924 12.1842 7.8238 12.2477 7.72 12.3047H7.58C7.4762 12.2477 7.376 12.1842 7.28 12.1147C5.6171 10.9599 3.6343 10.3549 1.61 10.3847H0.41ZM23.62 16.6547C24.236 16.175 24.9995 15.924 25.78 15.9447H27.39V12.7347H25.78C24.4052 12.7181 23.0619 13.146 21.95 13.9547C21.3243 14.416 20.5674 14.6649 19.79 14.6649C19.0126 14.6649 18.2557 14.416 17.63 13.9547C16.4899 13.1611 15.1341 12.7356 13.745 12.7356C12.3559 12.7356 11.0001 13.1611 9.86 13.9547C9.2343 14.416 8.4774 14.6649 7.7 14.6649C6.9226 14.6649 6.1657 14.416 5.54 13.9547C4.4144 13.1356 3.0518 12.7072 1.66 12.7347H0V15.9447H1.61C2.39051 15.924 3.154 16.175 3.77 16.6547C4.908 17.4489 6.2623 17.8747 7.65 17.8747C9.0377 17.8747 10.392 17.4489 11.53 16.6547C12.1468 16.1765 12.9097 15.9257 13.69 15.9447C14.4708 15.9223 15.2348 16.1735 15.85 16.6547C16.9901 17.4484 18.3459 17.8738 19.735 17.8738C21.1241 17.8738 22.4799 17.4484 23.62 16.6547ZM23.62 22.3947C24.236 21.915 24.9995 21.664 25.78 21.6847H27.39V18.4747H25.78C24.4052 18.4581 23.0619 18.886 21.95 19.6947C21.3243 20.156 20.5674 20.4049 19.79 20.4049C19.0126 20.4049 18.2557 20.156 17.63 19.6947C16.4899 18.9011 15.1341 18.4757 13.745 18.4757C12.3559 18.4757 11.0001 18.9011 9.86 19.6947C9.2343 20.156 8.4774 20.4049 7.7 20.4049C6.9226 20.4049 6.1657 20.156 5.54 19.6947C4.4144 18.8757 3.0518 18.4472 1.66 18.4747H0V21.6847H1.61C2.39051 21.664 3.154 21.915 3.77 22.3947C4.908 23.1889 6.2623 23.6147 7.65 23.6147C9.0377 23.6147 10.392 23.1889 11.53 22.3947C12.1468 21.9165 12.9097 21.6657 13.69 21.6847C14.4708 21.6623 15.2348 21.9135 15.85 22.3947C16.9901 23.1884 18.3459 23.6138 19.735 23.6138C21.1241 23.6138 22.4799 23.1884 23.62 22.3947Z"
+                fill="currentColor"
+              />
+            </svg>
+          </a>
+
+          <h1
+            class="mt-2 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl"
+          >
+            Formulario Recogida de basuras
+          </h1>
+
+          <p class="mt-4 leading-relaxed text-gray-500">
+            El reciclaje es una práctica individual que, sin embargo, adoptada por millones de personas a la vez puede generar enormes beneficios para el planeta.
+          </p>
+        </div>
+
+        <form action="#" class="mt-8 grid grid-cols-6 gap-6">
+          <div class="col-span-6 sm:col-span-3">
+            <label
+              for="FirstName"
+              class="block text-sm font-medium text-gray-700"
+            >
+              Nombres
+            </label>
+
+            <input
+              type="text"
+              id="FirstName"
+              name="first_name"
+              class="mt-1 w-full rounded-md border p-2 rounded bg-white text-sm text-gray-700 shadow-sm"
+            />
+          </div>
+
+          <div class="col-span-6 sm:col-span-3">
+            <label
+              for="LastName"
+              class="block text-sm font-medium text-gray-700"
+            >
+              Apellidos
+            </label>
+
+            <input
+              type="text"
+              id="LastName"
+              name="last_name"
+              class="mt-1 w-full rounded-md border p-2 rounded bg-white text-sm text-gray-700 shadow-sm"
+            />
+          </div>
+
+          <div class="col-span-6">
+            <label for="Email" class="block text-sm font-medium text-gray-700">
+              Correo electronico
+            </label>
+
+            <input
+              type="email"
+              id="Email"
+              name="email"
+              class="mt-1 w-full rounded-md border p-2 rounded bg-white text-sm text-gray-700 shadow-sm"
+            />
+          </div>
+          <div class="col-span-6 sm:col-span-3">
+          <label
+              for="telefono"
+              class="block text-sm font-medium text-gray-700"
+            >
+              Numero de telefono
+            </label>
+
+            <input
+              type="number"
+              id="telefono"
+              name="telefono"
+              class="mt-1 w-full rounded-md border p-2 rounded bg-white text-sm text-gray-700 shadow-sm"
+            />
+            </div>
+            <div class="col-span-6 sm:col-span-3">
+            <label for="seleccionar">Tipo de basura:</label>
+            <select id="seleccionar" name="opcion" class="w-full border p-2 rounded">
+              <option value="Residuos Sólidos">Residuos Sólidos</option>
+              <option value="Basura Orgánica">Basura Orgánica</option>
+              <option value="Plástico">Plástico</option>
+              <option value="Vidrio">Vidrio</option>
+            </select>
+            </div>
+
+            <div class="col-span-6">
+              <label
+              for="cantidad"
+              class="block text-sm font-medium text-gray-700"
+            >
+              Cantidad
+            </label>
+
+            <input
+              type="text"
+              id="cantidad"
+              name="cantidad"
+              class="mt-1 w-full rounded-md border p-2 rounded bg-white text-sm text-gray-700 shadow-sm"
+            />
+
+            </div>
+
+          <div class="col-span-6">
+            <label for="MarketingAccept" class="flex gap-4">
+              <input
+                type="checkbox"
+                id="MarketingAccept"
+                name="marketing_accept"
+                class="h-5 w-5 rounded-md border-gray-200 bg-white shadow-sm"
+              />
+
+              <span class="text-sm text-gray-700">
+                Quiero recibir correos electrónicos sobre eventos, actualizaciones de productos y anuncios de la empresa.
+              </span>
+            </label>
+          </div>
 
 
-  <div id="formulario_recogida">
-  <h1 class="titulo1">Formulario de Recogida de Basuras</h1>
-    <form action="procesar_formulario.php" method="post">
-        <label for="cantidad">Cantidad de Basura:</label>
-        <input type="text" id="cantidad" name="cantidad" required><br>
-        
-        <label for="tipo">Tipo de Basura:</label>
-        <select id="tipo" name="tipo" required>
-            <option value="Residuos Sólidos">Residuos Sólidos</option>
-            <option value="Basura Orgánica">Basura Orgánica</option>
-            <option value="Plástico">Plástico</option>
-            <option value="Vidrio">Vidrio</option>
-        </select><br>
-
-        <label for="nombre">Nombres y apellidos:</label>
-        <input type="text" id="nombre" name="nombre" required><br>
-        <label for="telefono">Teléfono:</label>
-        <input type="tel" id="telefono" name="telefono" required><br>
-        <label for="direccion">Direccion:</label>
-        <input type="text" id="direccion" name="direccion" required><br>
-
-        <label for="direccion">Mensaje:</label>
-        <textarea id="direccion" name="direccion" required></textarea><br>
-
-        <input type="submit" value="Enviar">
-    </form>
+          <div class="col-span-6 sm:flex sm:items-center sm:gap-4">
+            <button
+              class="inline-block shrink-0 rounded-md border border-blue-600 bg-green-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500"
+            >
+              Enviar
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
   </div>
-
+</section>
+</section>
+<!-- fin formulario recogida -->
 
 
 
@@ -209,15 +384,6 @@
   </section>
 
   <!-- end info section -->
-
-
-  <!-- footer section -->
-  <section class="container-fluid footer_section">
-    <p>
-      Copyright &copy; 2023 Mi mundo verde.
-    </p>
-  </section>
-  <!-- footer section -->
 
  <script src="script.js"></script>
   <script>
