@@ -4439,9 +4439,17 @@ function getURL() { window.location.href; } var protocol = location.protocol; $.
 
 
 const datosReciclaje = {
-  "banano": "la caneca verde.",
-  "tarro de agua": "la caneca blanca.",
-  "servilleta": "la caneca negra.",
+  "plastico": "la caneca blanca",
+  "carton": "la caneca blanca",
+  "vidrio": "la caneca blanca",
+  "papel": "la caneca blanca",
+  "metales": "la caneca blanca",
+  "organicos": "la caneca verde.",
+  "desechos": "la caneca verde.",
+  "papel higienico": "la caneca negra",
+  "servillletas": "la caneca negra",
+  "papeles y cartones contaminados": "la caneca negra",
+  "papeles metalizados": "la caneca negra",
   // Agrega más productos y sus instrucciones de reciclaje aquí
 };
 
