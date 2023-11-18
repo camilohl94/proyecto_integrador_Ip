@@ -23,7 +23,7 @@ body {
   background-color: #21610B;
   color: #fff;
   min-height: 10px;
-  padding: 1% ;
+  padding: 1%;
   height: 1%;
 }
 
@@ -68,18 +68,18 @@ a:focus {
   border: none;
 }
 
-.navbar-brand h1{
-color: #f6fdfe;
+.navbar-brand h1 {
+  color: #f6fdfe;
 
 }
 
 .nav-link:hover {
-  color: #fefefe;
+  color: #ffffff;
 }
 
 .logo_box {
   width: 135px;
-  
+
 }
 
 .logo_box img {
@@ -89,7 +89,7 @@ color: #f6fdfe;
 
 .call_to_btn {
   display: inline-block;
-  color: #fefefe;
+  color: #ffffff;
   padding: 10px 35px;
   background-color: #f6bb08;
   margin-top: 5%;
@@ -124,7 +124,7 @@ color: #f6fdfe;
 .slider_section .carousel-indicators .active {
   width: 24px;
   height: 24px;
-  background-color: #0fa71b;
+  background-color: #00A82D;
 }
 
 .carousel-control-prev,
@@ -157,7 +157,7 @@ color: #f6fdfe;
   background-image: url(../images/fondo-reci.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  
+
 }
 
 .slider_section .slider_box .fixed_company-detail {
@@ -171,30 +171,34 @@ color: #f6fdfe;
   width: 12px;
   text-align: center;
   word-break: break-word;
-  color: #0b0e0bfb;
+  color: #000000;
   text-transform: uppercase;
 }
 
 .slider_section .slider_box .slider-detail {
-  color: #09070e;
+  color: #000000;
   width: 70%;
   margin-top: 10%;
   margin-left: 15%;
+
 }
 
 .slider_section .slider_box .slider-detail .slider_detail-heading h2 {
   font-weight: 100;
   text-transform: uppercase;
+
 }
 
 .slider_section .slider_box .slider-detail .slider_detail-heading h1 {
   font-weight: 10%;
   text-transform: uppercase;
+  font-size: 30px;
+
 }
 
 .slider_section .slider_box .slider-detail .slider_detail-text {
   width: 95%;
-  color: #070707;
+  color: #000000;
 }
 
 .slider_section .slider_box .slider-detail .slider_detail-btn {
@@ -204,15 +208,14 @@ color: #f6fdfe;
 .slider_section .slider_box .slider-detail .slider_detail-btn a {
   margin-top: 28px;
   padding: 16px 20px;
-  background-color: #21610B;
+  background-color: #00A82D;
   color: #121010;
 }
 
 /* end slider section */
 
 /* welcome section */
-.welcome_section {
-}
+.welcome_section {}
 
 .welcome_section .col-md-6 {
   padding: 0 4%;
@@ -225,15 +228,17 @@ color: #f6fdfe;
 
 .welcome_detail h2 {
   text-transform: uppercase;
-  color: #0c0b09;
+  color: #000000;
   font-weight: bold;
 }
 
 .welcome_detail h3 {
   text-transform: uppercase;
-  color: #21610B;
+  color: #000000;
   position: relative;
   margin-left: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 30px;
 
 }
 
@@ -244,7 +249,7 @@ color: #f6fdfe;
   content: "";
   height: 1.5px;
   width: 140px;
-  background-color: #134611;
+  background-color: #00A82D;
 }
 
 .welcome_detail h2,
@@ -257,7 +262,7 @@ color: #f6fdfe;
 .welcome_section .welcome_detail-btn a:hover {
   text-transform: uppercase;
 
-  color: #0c0b09;
+  color: #000000;
 }
 
 .welcome_section .welcome_detail-btn a img {
@@ -269,8 +274,7 @@ color: #f6fdfe;
 
 
 /* security section */
-.security_section {
-}
+.security_section {}
 
 .security_section h2 {
   text-transform: uppercase;
@@ -282,9 +286,12 @@ color: #f6fdfe;
 
 .security_section h3 {
   text-transform: uppercase;
-  color: #21610B;
+  color: #000000;
   position: relative;
   text-align: center;
+  padding: 20px;
+  font-size: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .security_section h3::after {
@@ -295,7 +302,7 @@ color: #f6fdfe;
   content: "";
   height: 1.5px;
   width: 140px;
-  background-color: #36bb25;
+  background-color: #00A82D;
 }
 
 .security_section .security_container {
@@ -332,8 +339,8 @@ color: #f6fdfe;
   opacity: 0;
   text-transform: uppercase;
   padding: 8px 12px;
-  border: 1.5px solid #f0f0f0;
-  color: #fff;
+  border: 1.5px solid #ffffff;
+  color: #ffffff;
 }
 
 .security_section .security_img-box:hover a {
@@ -351,7 +358,7 @@ color: #f6fdfe;
 .security_btn a:hover {
   text-transform: uppercase;
 
-  color: #0c0b09;
+  color: #000000;
 }
 
 .security_btn a img {
@@ -370,7 +377,7 @@ color: #f6fdfe;
 .owl-carousel .owl-nav .owl-prev {
   position: absolute;
   top: 50%;
-  background-color: #21610B;
+  background-color: #00A82D;
   width: 70px;
   height: 40px;
   background-repeat: no-repeat;
@@ -391,102 +398,7 @@ color: #f6fdfe;
 
 /* end security section */
 
-.story_section {
-  padding: 0 4%;
-}
 
-.story_section .container-fluid {
-  -webkit-box-shadow: 1px -1px 24px -13px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 1px -1px 24px -13px rgba(0, 0, 0, 0.75);
-  box-shadow: 1px -1px 24px -13px rgba(0, 0, 0, 0.75);
-}
-
-.story_section .col-md-6 {
-  padding: 0;
-  display: flex;
-  align-items: center;
-  background-color: #fcfcfc;
-}
-
-.story_detail {
-  margin-left: 40px;
-}
-
-.story_detail h2 {
-  text-transform: uppercase;
-  color: #0c0b09;
-  font-weight: bold;
-}
-
-.story_detail h3 {
-  text-transform: uppercase;
-  color: #21610B;
-
-  margin: 0;
-}
-
-.story_detail {
-  width: 85%;
-}
-
-.story_detail .story_detail-btn {
-  margin-top: 25px;
-}
-
-.story_section .story_detail-btn a,
-.story_section .story_detail-btn a:hover {
-  text-transform: uppercase;
-
-  color: #0c0b09;
-}
-
-.story_section .story_detail-btn a img {
-  width: 25px;
-}
-
-.contact_form-container {
-  background-image: url(../images/fondo-reci1.jpg);
-}
-
-.contact_form-container form {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  
-}
-
-.contact_form-container .contact_box {
-  background-color: #fff;
-  padding: 35px 40px;
-  width: 50%;
-  height: 60%;
-  margin: 100px 50px;
-}
-
-.contact_form-container form input,
-.contact_form-container form input:focus,
-.contact_form-container form input:active {
-  border: none;
-  background-color: transparent;
-  border-bottom: 1px solid #e1e4e4;
-  width: 85%;
-  margin-top: 12px;
-  outline: none;
-}
-
-.contact_form-container form button {
-  border: none;
-  background-color: #21610B;
-  color: #fff;
-  padding: 8px 20px;
-  margin-top: 15px;
-}
-
-.contact_section .row .col-md-6 {
-  padding: 0;
-}
-
-/* end contact section */
 
 /* info section */
 .info_section {
@@ -500,7 +412,7 @@ color: #f6fdfe;
 }
 
 .info_section .info_detail p {
-  color: #fff;
+  color: #ffffff;
 }
 
 .address_link-container {
@@ -509,7 +421,7 @@ color: #f6fdfe;
 
 .address_link-container a {
   display: flex;
-  color: #fff;
+  color: #ffffff;
   margin: 15px 0;
   align-items: center;
 }
@@ -521,7 +433,7 @@ color: #f6fdfe;
 .info_section .news_container h3,
 .info_section .address_container h3 {
   text-transform: uppercase;
-  color: #fff;
+  color: #ffffff;
   font-size: 22px;
 }
 
@@ -531,15 +443,15 @@ color: #f6fdfe;
 
 .info_section .news_container form input {
   border: none;
-  background-color: #fff;
+  background-color: #ffffff;
   width: 70%;
   padding: 7px 10px;
 }
 
 .info_section .news_container form button {
   border: none;
-  background-color: #21610B;
-  color: #fff;
+  background-color: #00A82D;
+  color: #ffffff;
   font-size: 14px;
   padding: 8px 15px;
   margin-top: 15px;
@@ -552,120 +464,26 @@ color: #f6fdfe;
   justify-content: space-between;
 }
 
-.info_section .news_container .social_container > div {
-}
+.info_section .news_container .social_container>div {}
 
 /* end info section */
 
 /* footer section*/
 
 .footer_section {
-  background-color: #21610B;
+  background-color: #00A82D;
   padding: 20px 0;
   font-family: "Roboto", sans-serif;
 }
 
 .footer_section p {
-  color: #fff;
+  color: #ffffff;
   margin: 0;
   text-align: center;
 }
 
 .footer_section a {
-  color: #fff;
+  color: #ffffff;
 }
 
 /* end footer section*/
-
-
-
-/* inicio stylos formularios de registro */
-#registro-form {
-  max-width: 80%;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-#registro-form label {
-  display: block;
-  margin-bottom: 10px;
-  font-weight: bold;
-}
-
-#registro-form input[type="text"],
-#registro-form input[type="email"],
-#registro-form input[type="password"],
-#registro-form input[type="tel"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-#registro-form input[type="submit"] {
-  background-color: green;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 18px;
-  cursor: pointer;
-}
-
-#registro-form input[type="submit"]:hover {
-  background-color: darkgreen;
-}
-
-
-/* fin stylos formularios de registro */
-
-
-/* inicio de estilo de la tienda  */
-.productos-container{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  
-}
-.title{
-  text-align: center;
-  display: inline-block;
-  position:absolute;
-  margin-bottom: 60px;
-  color: #123a16;
-
-}
-
-.producto {
-  width: 300px;
-  height: 400px;
-    text-align: center;
-    background-color: #fff;
-    padding: 20px;
-    margin: 50px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    
-
-   
-}
-
-.producto img {
-    max-width: 80%;
-    height: auto;
-}
-
-button {
-    background-color: #154f0e;
-    color: #fff;
-    padding: 5px 10px;
-    border: none;
-    cursor: pointer;
-}
-/* fin de estilos de la tienda */
