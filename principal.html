@@ -14,30 +14,21 @@
   <meta name="author" content="" />
 
   <title>Mi mundo verde</title>
-
-  <!-- slider stylesheet -->
+ <!-- slider stylesheet -->
   <link rel="stylesheet" type="text/css"
     href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
-
-  <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-
-  <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:400,500&display=swap"
-    rel="stylesheet" />
-  <!-- Custom styles for this template -->
-  <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
-  <link rel="stylesheet" href="principal.css">
   <script src="script.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.1/dist/cdn.min.js"></script>
-
+  <link href="css/principal.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
 </head>
 
 <body>
   <!-- encabezado -->
-  <section>
+  <section class="header">
     <nav x-data="{ isOpen: false }" class="relative bg-white shadow dark:bg-gray-800">
       <div class="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
         <div class="flex items-center justify-between">
@@ -95,58 +86,17 @@
     </nav>
   </section>
   <!-- fin encabezado -->
-
+<main class="main-contenido">
   <!-- buscador -->
   <section id="reciclemos">
     <div class="bg-no-repeat bg-cover bg-center p-4 rounded-lg text-center"
-      style="background-image: url(images/fondo_buscador.webp);">
-      <h1 class="text-3xl font-bold p-6">Reciclemos </h1>
+      style="background-image: url(images/fondo_buscador.webp);" class="searchBox">
+      <h1 class="text-3xl font-bold ">Reciclemos </h1>
       <input type="text" id="searchInput" placeholder="Ingresa un producto"
-        class="w-full px-4 py-2 rounded-lg focus:outline-none">
-      <button onclick="buscarReciclaje()" class="bg-green-600  text-white px-4  hover:bg-gray-500 ">Buscar</button>
+        class="w-full px-4 py-2 rounded-lg focus:outline-none bg-black-100">
+      <button onclick="buscarReciclaje()" class="searchButton">Buscar</button>
       <div id="result"></div>
     </div>
-    <div class="searchBox">
-
-      <input class="searchInput" type="text" name="" placeholder="Search something">
-      <button class="searchButton" href="#">
-
-
-
-        <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
-          <g clip-path="url(#clip0_2_17)">
-            <g filter="url(#filter0_d_2_17)">
-              <path
-                d="M23.7953 23.9182L19.0585 19.1814M19.0585 19.1814C19.8188 18.4211 20.4219 17.5185 20.8333 16.5251C21.2448 15.5318 21.4566 14.4671 21.4566 13.3919C21.4566 12.3167 21.2448 11.252 20.8333 10.2587C20.4219 9.2653 19.8188 8.36271 19.0585 7.60242C18.2982 6.84214 17.3956 6.23905 16.4022 5.82759C15.4089 5.41612 14.3442 5.20435 13.269 5.20435C12.1938 5.20435 11.1291 5.41612 10.1358 5.82759C9.1424 6.23905 8.23981 6.84214 7.47953 7.60242C5.94407 9.13789 5.08145 11.2204 5.08145 13.3919C5.08145 15.5634 5.94407 17.6459 7.47953 19.1814C9.01499 20.7168 11.0975 21.5794 13.269 21.5794C15.4405 21.5794 17.523 20.7168 19.0585 19.1814Z"
-                stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
-                shape-rendering="crispEdges"></path>
-            </g>
-          </g>
-          <defs>
-            <filter id="filter0_d_2_17" x="-0.418549" y="3.70435" width="29.7139" height="29.7139"
-              filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-              <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
-              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                result="hardAlpha"></feColorMatrix>
-              <feOffset dy="4"></feOffset>
-              <feGaussianBlur stdDeviation="2"></feGaussianBlur>
-              <feComposite in2="hardAlpha" operator="out"></feComposite>
-              <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"></feColorMatrix>
-              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2_17"></feBlend>
-              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2_17" result="shape"></feBlend>
-            </filter>
-            <clipPath id="clip0_2_17">
-              <rect width="28.0702" height="28.0702" fill="white" transform="translate(0.403503 0.526367)"></rect>
-            </clipPath>
-          </defs>
-        </svg>
-
-
-      </button>
-    </div>
-
-
-
   </section>
   <!-- fin buscador -->
 
@@ -351,7 +301,7 @@
 
             <div class="relative pt-3 bg-white">
               <h3 class="text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4">
-                Bolsas icónicas de IKEA.
+               Productos de maquillaje sostenible
               </h3>
 
               <p class="mt-2">
@@ -365,7 +315,7 @@
 
         <li>
           <a href="carrito.html" target="_blank" class="block overflow-hidden group">
-            <img src="images/produc-sos2.jfif" alt=""
+            <img src="images/matera_eco.jpg" alt=""
               class="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]" />
 
             <div class="relative pt-3 bg-white">
@@ -410,7 +360,7 @@
           <div class="lg:col-span-2 lg:py-8">
             <ul class="grid grid-cols-2 gap-4">
               <li>
-                <a href="#" class="block group">
+                <a href="carrito.html" class="block group">
                   <img src="images/pro_sos_cepillo.jpg" alt="" class="object-cover w-full rounded aspect-square" />
 
                   <div class="mt-3">
@@ -424,7 +374,7 @@
               </li>
 
               <li>
-                <a href="#" class="block group">
+                <a href="carrito.html" class="block group">
                   <img src="images/pro_sos_maquillaje.jpg" alt="" class="object-cover w-full rounded aspect-square" />
 
                   <div class="mt-3">
@@ -566,7 +516,7 @@
 
             <div class="col-span-6 sm:flex sm:items-center sm:gap-4">
               <button
-                class="inline-block shrink-0 rounded-md border border-blue-600 bg-green-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500">
+                class="inline-block shrink-0 rounded-md border border-blue-600 bg-green-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-green-600 hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500">
                 Enviar
               </button>
             </div>
@@ -705,7 +655,7 @@
     </div>
   </section>
   <!-- fin seccion -->
-
+</main>
 
   <!-- info section -->
   <section class="info_section layout_padding">
@@ -843,9 +793,6 @@
       }
     });
   </script>
-
-
-
 </body>
 
 </html>
