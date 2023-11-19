@@ -26,77 +26,131 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:400,500&display=swap"
     rel="stylesheet" />
   <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
   <link rel="stylesheet" href="principal.css">
   <script src="script.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.1/dist/cdn.min.js"></script>
- 
+
 </head>
 
 <body>
-   <!-- encabezado -->
+  <!-- encabezado -->
   <section>
     <nav x-data="{ isOpen: false }" class="relative bg-white shadow dark:bg-gray-800">
       <div class="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
-          <div class="flex items-center justify-between">
-              <a href="#">
-                  <img class="w-40 " src="images/logo_mmv.png" alt="">
-              </a>
-  
-              <!-- Mobile menu button -->
-              <div class="flex lg:hidden">
-                  <button x-cloak @click="isOpen = !isOpen" type="button" class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="toggle menu">
-                      <svg x-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
-                      </svg>
-              
-                      <svg x-show="isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                      </svg>
-                  </button>
-              </div>
+        <div class="flex items-center justify-between">
+          <a href="#">
+            <img class="w-40 " src="images/logo_mmv.png" alt="">
+          </a>
+
+          <!-- Mobile menu button -->
+          <div class="flex lg:hidden">
+            <button x-cloak @click="isOpen = !isOpen" type="button"
+              class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400"
+              aria-label="toggle menu">
+              <svg x-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
+              </svg>
+
+              <svg x-show="isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
           </div>
-  
-          <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
-          <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 block' : 'opacity-0 -translate-x-full hidden']" class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white dark:bg-gray-800 md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center">
-              <div class="flex flex-col md:flex-row md:mx-6">
-                  <a class="my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0" href="principal.html">Inicio</a>
-                  <a class="my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0" href="#recoge">Recogida de residuos</a>
-                  <a class="my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0" href="#reciclemos">Reciclemos</a>
-                  <a class="my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0" href="index.html">Salir</a>
-                  
-              </div>
-  
-              <div class="flex justify-center md:block">
-                  <a class="relative text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-300" href="carrito.html" target="_blank">
-                      <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M3 3H5L5.4 5M7 13H17L21 5H5.4M7 13L5.4 5M7 13L4.70711 15.2929C4.07714 15.9229 4.52331 17 5.41421 17H17M17 17C15.8954 17 15 17.8954 15 19C15 20.1046 15.8954 21 17 21C18.1046 21 19 20.1046 19 19C19 17.8954 18.1046 17 17 17ZM9 19C9 20.1046 8.10457 21 7 21C5.89543 21 5 20.1046 5 19C5 17.8954 5.89543 17 7 17C8.10457 17 9 17.8954 9 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-  
-                      <span class="absolute top-0 left-0 p-1 text-xs text-white bg-blue-500 rounded-full"></span>
-                  </a>
-              </div>
+        </div>
+
+        <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+        <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 block' : 'opacity-0 -translate-x-full hidden']"
+          class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white dark:bg-gray-800 md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center">
+          <div class="flex flex-col md:flex-row md:mx-6">
+            <a class="my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
+              href="principal.html">Inicio</a>
+            <a class="my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
+              href="#recoge">Recogida de residuos</a>
+            <a class="my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
+              href="#reciclemos">Reciclemos</a>
+            <a class="my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
+              href="index.html">Salir</a>
+
           </div>
+
+          <div class="flex justify-center md:block">
+            <a class="relative text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-300"
+              href="carrito.html" target="_blank">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3 3H5L5.4 5M7 13H17L21 5H5.4M7 13L5.4 5M7 13L4.70711 15.2929C4.07714 15.9229 4.52331 17 5.41421 17H17M17 17C15.8954 17 15 17.8954 15 19C15 20.1046 15.8954 21 17 21C18.1046 21 19 20.1046 19 19C19 17.8954 18.1046 17 17 17ZM9 19C9 20.1046 8.10457 21 7 21C5.89543 21 5 20.1046 5 19C5 17.8954 5.89543 17 7 17C8.10457 17 9 17.8954 9 19Z"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+
+              <span class="absolute top-0 left-0 p-1 text-xs text-white bg-blue-500 rounded-full"></span>
+            </a>
+          </div>
+        </div>
       </div>
-  </nav>
+    </nav>
   </section>
   <!-- fin encabezado -->
 
   <!-- buscador -->
   <section id="reciclemos">
-    <div class="bg-no-repeat bg-cover bg-center p-4 rounded-lg text-center" style="background-image: url(images/fondo_buscador.webp);">
-      <h1 class="text-xl font-semibold">Reciclemos </h1>
-      <input type="text" id="searchInput" placeholder="Ingresa un producto" class="w-full px-4 py-2 rounded-lg focus:outline-none">
-      <button onclick="buscarReciclaje()" class="bg-green-700 text-white px-4 ru">Buscar</button>
+    <div class="bg-no-repeat bg-cover bg-center p-4 rounded-lg text-center"
+      style="background-image: url(images/fondo_buscador.webp);">
+      <h1 class="text-3xl font-bold p-6">Reciclemos </h1>
+      <input type="text" id="searchInput" placeholder="Ingresa un producto"
+        class="w-full px-4 py-2 rounded-lg focus:outline-none">
+      <button onclick="buscarReciclaje()" class="bg-green-600  text-white px-4  hover:bg-gray-500 ">Buscar</button>
       <div id="result"></div>
     </div>
-    </section>
-    <!-- fin buscador -->
+    <div class="searchBox">
 
- <!-- espacio de noticias -->
+      <input class="searchInput" type="text" name="" placeholder="Search something">
+      <button class="searchButton" href="#">
+
+
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+          <g clip-path="url(#clip0_2_17)">
+            <g filter="url(#filter0_d_2_17)">
+              <path
+                d="M23.7953 23.9182L19.0585 19.1814M19.0585 19.1814C19.8188 18.4211 20.4219 17.5185 20.8333 16.5251C21.2448 15.5318 21.4566 14.4671 21.4566 13.3919C21.4566 12.3167 21.2448 11.252 20.8333 10.2587C20.4219 9.2653 19.8188 8.36271 19.0585 7.60242C18.2982 6.84214 17.3956 6.23905 16.4022 5.82759C15.4089 5.41612 14.3442 5.20435 13.269 5.20435C12.1938 5.20435 11.1291 5.41612 10.1358 5.82759C9.1424 6.23905 8.23981 6.84214 7.47953 7.60242C5.94407 9.13789 5.08145 11.2204 5.08145 13.3919C5.08145 15.5634 5.94407 17.6459 7.47953 19.1814C9.01499 20.7168 11.0975 21.5794 13.269 21.5794C15.4405 21.5794 17.523 20.7168 19.0585 19.1814Z"
+                stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                shape-rendering="crispEdges"></path>
+            </g>
+          </g>
+          <defs>
+            <filter id="filter0_d_2_17" x="-0.418549" y="3.70435" width="29.7139" height="29.7139"
+              filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha"></feColorMatrix>
+              <feOffset dy="4"></feOffset>
+              <feGaussianBlur stdDeviation="2"></feGaussianBlur>
+              <feComposite in2="hardAlpha" operator="out"></feComposite>
+              <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"></feColorMatrix>
+              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2_17"></feBlend>
+              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2_17" result="shape"></feBlend>
+            </filter>
+            <clipPath id="clip0_2_17">
+              <rect width="28.0702" height="28.0702" fill="white" transform="translate(0.403503 0.526367)"></rect>
+            </clipPath>
+          </defs>
+        </svg>
+
+
+      </button>
+    </div>
+
+
+
+  </section>
+  <!-- fin buscador -->
+
+  <!-- espacio de noticias -->
 
   <section class="px-5 py-10 dark:bg-gray-800 dark:text-gray-100">
     <div class="container grid grid-cols-12 mx-auto gap-y-6 md:gap-10">
@@ -107,15 +161,21 @@
               <span class="flex-shrink-0 w-2 h-2 uppercase rounded-full dark:bg-violet-400"></span>
               <span class="text-xs font-bold tracki uppercase" _msttexthash="139919" _msthash="320">Exclusivo</span>
             </h3>
-            <a rel="noopener noreferrer" href="https://www.eltiempo.com/colombia/medellin/medellin-familia-recicladora-perdio-el-trabajo-de-20-anos-tras-voraz-incendio-818489" class="font-serif hover:underline" _msttexthash="1929018" _msthash="321">La familia recicladora que perdió el trabajo de 20 años tras voraz incendio en Medellín</a>
-            <p class="text-xs dark:text-gray-400" _msttexthash="776737" _msthash="322">Hace 47 minutos 
+            <a rel="noopener noreferrer"
+              href="https://www.eltiempo.com/colombia/medellin/medellin-familia-recicladora-perdio-el-trabajo-de-20-anos-tras-voraz-incendio-818489"
+              class="font-serif hover:underline" _msttexthash="1929018" _msthash="321">La familia recicladora que perdió
+              el trabajo de 20 años tras voraz incendio en Medellín</a>
+            <p class="text-xs dark:text-gray-400" _msttexthash="776737" _msthash="322">Hace 47 minutos
           </div>
           <div class="flex flex-col space-y-2">
             <h3 class="flex items-center space-x-2 dark:text-gray-400">
               <span class="flex-shrink-0 w-2 h-2 uppercase rounded-full dark:bg-violet-400"></span>
               <span class="text-xs font-bold tracki uppercase" _msttexthash="139919" _msthash="317">Exclusivo</span>
             </h3>
-            <a rel="noopener noreferrer" href="https://www.eltiempo.com/justicia/servicios/fuerza-aeroespacial-de-colombia-fac-apoya-el-reciclaje-en-amazonas-808989" class="font-serif hover:underline" _msttexthash="1662427" _msthash="318">En los 'Vuelos de la Esperanza', la FAC ha transportado 30 toneladas de reciclables</a>
+            <a rel="noopener noreferrer"
+              href="https://www.eltiempo.com/justicia/servicios/fuerza-aeroespacial-de-colombia-fac-apoya-el-reciclaje-en-amazonas-808989"
+              class="font-serif hover:underline" _msttexthash="1662427" _msthash="318">En los 'Vuelos de la Esperanza',
+              la FAC ha transportado 30 toneladas de reciclables</a>
             <p class="text-xs dark:text-gray-400" _msttexthash="599222" _msthash="319">hace 2 horas
             </p>
           </div>
@@ -124,8 +184,11 @@
               <span class="flex-shrink-0 w-2 h-2 uppercase rounded-full dark:bg-violet-400"></span>
               <span class="text-xs font-bold tracki uppercase" _msttexthash="139919" _msthash="314">Exclusivo</span>
             </h3>
-            <a rel="noopener noreferrer" href="https://www.eltiempo.com/contenido-comercial/urbaser-impulsa-valorizacion-de-residuos-y-economia-circular-808778" class="font-serif hover:underline" _msttexthash="1308749" _msthash="315">Urbaser impulsa valorización de residuos y economía circular</a>
-            <p class="text-xs dark:text-gray-400" _msttexthash="599508" _msthash="316">hace 4 horas 
+            <a rel="noopener noreferrer"
+              href="https://www.eltiempo.com/contenido-comercial/urbaser-impulsa-valorizacion-de-residuos-y-economia-circular-808778"
+              class="font-serif hover:underline" _msttexthash="1308749" _msthash="315">Urbaser impulsa valorización de
+              residuos y economía circular</a>
+            <p class="text-xs dark:text-gray-400" _msttexthash="599508" _msthash="316">hace 4 horas
             </p>
           </div>
         </div>
@@ -134,60 +197,88 @@
             <div class="w-1/2 h-full dark:bg-violet-400"></div>
           </div>
           <a rel="noopener noreferrer" href="#" class="flex items-center justify-between w-full">
-            <span class="text-xs font-bold tracki uppercase" _msttexthash="345384" _msthash="323">Ver más exclusivas</span>
-            <svg viewBox="0 0 24 24" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" class="w-4 stroke-current dark:text-violet-400">
+            <span class="text-xs font-bold tracki uppercase" _msttexthash="345384" _msthash="323">Ver más
+              exclusivas</span>
+            <svg viewBox="0 0 24 24" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"
+              class="w-4 stroke-current dark:text-violet-400">
               <line x1="5" y1="12" x2="19" y2="12"></line>
               <polyline points="12 5 19 12 12 19"></polyline>
             </svg>
           </a>
         </div>
       </div>
-      <div class="relative flex col-span-12 bg-center bg-no-repeat bg-cover dark:bg-gray-500 xl:col-span-6 lg:col-span-5 md:col-span-9 min-h-96" style="background-image: url('images/imagen_noticia.jpeg');">
-        <span class="absolute px-1 pb-2 text-xs font-bold uppercase border-b-2 left-6 top-6 dark:border-violet-400 dark:text-white-100 " _msttexthash="229606" _msthash="324">Medellín</span>
-        <a class="flex flex-col items-center justify-end p-6 text-center sm:p-8 group dark:via-transparent flex-grow-1 bg-gradient-to-b dark:from-gray-900 dark:to-gray-900">
+      <div
+        class="relative flex col-span-12 bg-center bg-no-repeat bg-cover dark:bg-gray-500 xl:col-span-6 lg:col-span-5 md:col-span-9 min-h-96"
+        style="background-image: url('images/imagen_noticia.jpeg');">
+        <span
+          class="absolute px-1 pb-2 text-xs font-bold uppercase border-b-2 left-6 top-6 dark:border-violet-400 dark:text-white-100 text-gray-100"
+          _msttexthash="229606" _msthash="324">Medellín</span>
+        <a
+          class="flex flex-col items-center justify-end p-6 text-center sm:p-8 group dark:via-transparent flex-grow-1 bg-gradient-to-b dark:from-gray-900 dark:to-gray-900">
           <span class="flex items-center mb-4 space-x-2 dark:text-violet-400">
             <span class="relative flex-shrink-0 w-2 h-2 rounded-full dark:bg-violet-400">
-              <span class="absolute flex-shrink-0 w-3 h-3 rounded-full -left-1 -top-1 animate-ping dark:bg-violet-400"></span>
+              <span
+                class="absolute flex-shrink-0 w-3 h-3 rounded-full -left-1 -top-1 animate-ping dark:bg-violet-400"></span>
             </span>
-            <span class="text-sm font-bold" _msttexthash="62504" _msthash="325">Ecoruta</span>
           </span>
-          <h1 rel="noopener noreferrer" href="https://www.elcolombiano.com/antioquia/medellin-busca-que-25-de-residuos-no-sea-basura-JM4916931" class="font-serif text-2xl font-semibold group-hover:underline dark:text-gray-100" _msttexthash="3556423" _msthash="326">Así planea Medellín hacerle frente al problema de las basuras</h1>
+          <h1 rel="noopener noreferrer"
+            href="https://www.elcolombiano.com/antioquia/medellin-busca-que-25-de-residuos-no-sea-basura-JM4916931"
+            class="font-serif text-2xl font-semibold group-hover:underline dark:text-gray-100" _msttexthash="3556423"
+            _msthash="326"></h1>
         </a>
       </div>
       <div class="hidden py-2 xl:col-span-3 lg:col-span-4 md:hidden lg:block">
         <div class="mb-8 space-x-5 border-b-2 border-opacity-10 dark:border-violet-400">
-          <button type="button" class="pb-5 text-xs font-bold uppercase border-b-2 dark:border-violet-400" _msttexthash="91195" _msthash="327">Último</button>
-          <button type="button" class="pb-5 text-xs font-bold uppercase border-b-2 dark:border-transparent dark:text-gray-400" _msttexthash="96980" _msthash="328">Popular</button>
+          <button type="button" class="pb-5 text-xs font-bold uppercase border-b-2 dark:border-violet-400"
+            _msttexthash="91195" _msthash="327">Último</button>
+          <button type="button"
+            class="pb-5 text-xs font-bold uppercase border-b-2 dark:border-transparent dark:text-gray-400"
+            _msttexthash="96980" _msthash="328">Popular</button>
         </div>
         <div class="flex flex-col divide-y divide-gray-700">
           <div class="flex px-1 py-4">
-            <img alt="" class="flex-shrink-0 object-cover w-20 h-20 mr-4 dark:bg-gray-500" src="images/imagen_noticia_1.jpg">
+            <img alt="" class="flex-shrink-0 object-cover w-20 h-20 mr-4 dark:bg-gray-500"
+              src="images/imagen_noticia_1.jpg">
             <div class="flex flex-col flex-grow">
-              <a rel="noopener noreferrer" href="https://www.portafolio.co/sostenibilidad/reciclaje-inclusivo-evitaria-emision-de-195-toneladas-de-co2-al-ano-en-latinoamerica-591343" class="font-serif hover:underline" _msttexthash="1018901" _msthash="312">El reciclaje inclusivo puede evitar emisión de 195 toneladas de CO2</a>
+              <a rel="noopener noreferrer"
+                href="https://www.portafolio.co/sostenibilidad/reciclaje-inclusivo-evitaria-emision-de-195-toneladas-de-co2-al-ano-en-latinoamerica-591343"
+                class="font-serif hover:underline" _msttexthash="1018901" _msthash="312">El reciclaje inclusivo puede
+                evitar emisión de 195 toneladas de CO2</a>
               <p class="mt-auto text-xs dark:text-gray-400" _msttexthash="480376" _msthash="313">Hace 5 minutos
               </p>
             </div>
           </div>
           <div class="flex px-1 py-4">
-            <img alt="" class="flex-shrink-0 object-cover w-20 h-20 mr-4 dark:bg-gray-500" src="images/imagen_noticia_2.jpg">
+            <img alt="" class="flex-shrink-0 object-cover w-20 h-20 mr-4 dark:bg-gray-500"
+              src="images/imagen_noticia_2.jpg">
             <div class="flex flex-col flex-grow">
-              <a rel="noopener noreferrer" href="https://www.msn.com/es-co/noticias/other/la-gran-inversi%C3%B3n-que-ayudar%C3%A1-a-consolidar-el-reciclaje-de-botellas-de-pl%C3%A1stico/ar-AA1iZoG3" class="font-serif hover:underline" _msttexthash="684216" _msthash="310">La gran inversión que ayudará a consolidar el reciclaje de botellas de plástico</a>
+              <a rel="noopener noreferrer"
+                href="https://www.msn.com/es-co/noticias/other/la-gran-inversi%C3%B3n-que-ayudar%C3%A1-a-consolidar-el-reciclaje-de-botellas-de-pl%C3%A1stico/ar-AA1iZoG3"
+                class="font-serif hover:underline" _msttexthash="684216" _msthash="310">La gran inversión que ayudará a
+                consolidar el reciclaje de botellas de plástico</a>
               <p class="mt-auto text-xs dark:text-gray-400" _msttexthash="478049" _msthash="311">Hace 14 minutos
               </p>
             </div>
           </div>
           <div class="flex px-1 py-4">
-            <img alt="" class="flex-shrink-0 object-cover w-20 h-20 mr-4 dark:bg-gray-500" src="images/imagen_noticia_3.jpg">
+            <img alt="" class="flex-shrink-0 object-cover w-20 h-20 mr-4 dark:bg-gray-500"
+              src="images/imagen_noticia_3.jpg">
             <div class="flex flex-col flex-grow">
-              <a rel="noopener noreferrer" href="https://www.laopinion.com.co/cucuta/reciclaje-cucutenos-estan-ahora-en-la-rejugada" class="font-serif hover:underline" _msttexthash="1268761" _msthash="308">Reciclaje: cucuteños están ahora en la ‘rejugada’</a>
+              <a rel="noopener noreferrer"
+                href="https://www.laopinion.com.co/cucuta/reciclaje-cucutenos-estan-ahora-en-la-rejugada"
+                class="font-serif hover:underline" _msttexthash="1268761" _msthash="308">Reciclaje: cucuteños están
+                ahora en la ‘rejugada’</a>
               <p class="mt-auto text-xs dark:text-gray-400" _msttexthash="367588" _msthash="309">Hace 22 minutos
               </p>
             </div>
           </div>
           <div class="flex px-1 py-4">
-            <img alt="" class="flex-shrink-0 object-cover w-20 h-20 mr-4 dark:bg-gray-500" src="images/imagen_noticia_4.jpg">
+            <img alt="" class="flex-shrink-0 object-cover w-20 h-20 mr-4 dark:bg-gray-500"
+              src="images/imagen_noticia_4.jpg">
             <div class="flex flex-col flex-grow">
-              <a rel="noopener noreferrer" href="https://news.un.org/es/story/2022/05/1508782" class="font-serif hover:underline" _msttexthash="409227" _msthash="306">El reciclaje devuelve ‘la vida’ al cabo de la vela</a>
+              <a rel="noopener noreferrer" href="https://news.un.org/es/story/2022/05/1508782"
+                class="font-serif hover:underline" _msttexthash="409227" _msthash="306">El reciclaje devuelve ‘la vida’
+                al cabo de la vela</a>
               <p class="mt-auto text-xs dark:text-gray-400" _msttexthash="473954" _msthash="307">Hace 37 minutos
               </p>
             </div>
@@ -198,113 +289,93 @@
   </section>
 
   <!-- fin seccion de noticias. -->
-  
-<!-- espacio de tienda -->
+
+  <!-- espacio de tienda -->
   <section>
     <div class="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
       <header class="text-center">
         <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">
           Tienda ecologica
         </h2>
-  
+
         <p class="max-w-md mx-auto mt-4 text-gray-500">
-         Encuentra en nuestra tienda todos los productos sostenibles
+          Encuentra en nuestra tienda todos los productos sostenibles
         </p>
       </header>
-  
+
       <ul class="grid gap-4 mt-8 sm:grid-cols-2 lg:grid-cols-4">
         <li>
-          <a href="#" class="block overflow-hidden group">
-            <img
-              src="images/pro_sos_bolsa.jpg"
-              alt=""
-              class="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]"
-            />
-  
+          <a href="carrito.html" target="_blank" class="block overflow-hidden group">
+            <img src="images/pro_sos_bolsa.jpg" alt=""
+              class="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]" />
+
             <div class="relative pt-3 bg-white">
-              <h3
-                class="text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4"
-              >
+              <h3 class="text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4">
 
                 Bolsas de basura 100% biodegradables
 
               </h3>
-  
+
               <p class="mt-2">
                 <span class="sr-only"> Precio </span>
-  
+
                 <span class="tracking-wider text-gray-900"> $2000 </span>
               </p>
             </div>
           </a>
         </li>
-  
+
         <li>
-          <a href="#" class="block overflow-hidden group">
-            <img
-              src="images/pro_sos_termo.jpg"
-              alt=""
-              class="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]"
-            />
-  
+          <a href="carrito.html" class="block overflow-hidden group">
+            <img src="images/pro_sos_termo.jpg" alt=""
+              class="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]" />
+
             <div class="relative pt-3 bg-white">
-              <h3
-                class="text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4"
-              >
-                Termos portátiles 
+              <h3 class="text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4">
+                Termos portátiles
               </h3>
-  
+
               <p class="mt-2">
                 <span class="sr-only"> Regular Price </span>
-  
+
                 <span class="tracking-wider text-gray-900"> $10.000 </span>
               </p>
             </div>
           </a>
         </li>
-  
+
         <li>
-          <a href="#" class="block overflow-hidden group">
-            <img
-              src="images/pro_sos_bolsa1.jpg"
-              alt=""
-              class="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]"
-            />
-  
+          <a href="carrito.html" target="_blank" class="block overflow-hidden group">
+            <img src="images/pro_sos_bolsa1.jpg" alt=""
+              class="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]" />
+
             <div class="relative pt-3 bg-white">
-              <h3
-                class="text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4"
-              >
-              Bolsas icónicas de IKEA.
+              <h3 class="text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4">
+                Bolsas icónicas de IKEA.
               </h3>
-  
+
               <p class="mt-2">
                 <span class="sr-only"> Regular Price </span>
-  
+
                 <span class="tracking-wider text-gray-900"> $20.000 </span>
               </p>
             </div>
           </a>
         </li>
-  
+
         <li>
-          <a href="#" class="block overflow-hidden group">
-            <img
-              src="images/produc-sos2.jfif"
-              alt=""
-              class="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]"
-            />
-  
+          <a href="carrito.html" target="_blank" class="block overflow-hidden group">
+            <img src="images/produc-sos2.jfif" alt=""
+              class="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]" />
+
             <div class="relative pt-3 bg-white">
-              <h3
-                class="text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4"
-              >
-              Materas Ecologicas 
+              <h3 class="text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4">
+                Materas Ecologicas
               </h3>
-  
+
               <p class="mt-2">
                 <span class="sr-only"> precio</span>
-  
+
                 <span class="tracking-wider text-gray-900"> $ 30.000 </span>
               </p>
             </div>
@@ -322,58 +393,45 @@
             <div class="max-w-md mx-auto text-center lg:text-left">
               <header>
                 <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">Productos biodegradables</h2>
-    
+
                 <p class="mt-4 text-gray-500">
-                  Has de tu rutina un espacio respetuoso para el ambiente y cómodo para ti con los mejores productos biodegradables.
+                  Has de tu rutina un espacio respetuoso para el ambiente y cómodo para ti con los mejores productos
+                  biodegradables.
                 </p>
               </header>
-    
-              <a
-                href="#"
-                class="inline-block px-12 py-3 mt-8 text-sm font-medium text-white transition bg-gray-900 border border-gray-900 rounded hover:shadow focus:outline-none focus:ring"
-              >
+
+              <a href="#"
+                class="inline-block px-12 py-3 mt-8 text-sm font-medium text-white transition bg-gray-900 border border-gray-900 rounded hover:shadow focus:outline-none focus:ring">
                 Comprar ahora
               </a>
             </div>
           </div>
-    
+
           <div class="lg:col-span-2 lg:py-8">
             <ul class="grid grid-cols-2 gap-4">
               <li>
                 <a href="#" class="block group">
-                  <img
-                    src="images/pro_sos_cepillo.jpg"
-                    alt=""
-                    class="object-cover w-full rounded aspect-square"
-                  />
-    
+                  <img src="images/pro_sos_cepillo.jpg" alt="" class="object-cover w-full rounded aspect-square" />
+
                   <div class="mt-3">
-                    <h3
-                      class="font-medium text-gray-900 group-hover:underline group-hover:underline-offset-4"
-                    >
-                    Cepillos de dientes de bambú
+                    <h3 class="font-medium text-gray-900 group-hover:underline group-hover:underline-offset-4">
+                      Cepillos de dientes de bambú
                     </h3>
-    
+
                     <p class="mt-1 text-sm text-gray-700">$5000</p>
                   </div>
                 </a>
               </li>
-    
+
               <li>
                 <a href="#" class="block group">
-                  <img
-                    src="images/pro_sos_maquillaje.jpg"
-                    alt=""
-                    class="object-cover w-full rounded aspect-square"
-                  />
-    
+                  <img src="images/pro_sos_maquillaje.jpg" alt="" class="object-cover w-full rounded aspect-square" />
+
                   <div class="mt-3">
-                    <h3
-                      class="font-medium text-gray-900 group-hover:underline group-hover:underline-offset-4"
-                    >
-                    Maquillaje ecológico
+                    <h3 class="font-medium text-gray-900 group-hover:underline group-hover:underline-offset-4">
+                      Maquillaje ecológico
                     </h3>
-    
+
                     <p class="mt-1 text-sm text-gray-700">$20000</p>
                   </div>
                 </a>
@@ -387,417 +445,260 @@
 
   <!-- fin tienda -->
 
-<!-- formulario recogida de basuras -->
+  <!-- formulario recogida de basuras -->
 
-<section class="bg-white" id="recoge">
-  <div class="lg:grid lg:min-h-screen lg:grid-cols-12">
-    <section
-      class="relative flex h-32 items-end bg-gray-900 lg:col-span-5 lg:h-full xl:col-span-6"
-    >
-      <img
-        alt="Night"
-        src="images/formulario_recogida.jpg"
-        class="absolute inset-0 h-full w-full object-cover opacity-60"
-      />
+  <section class="bg-white" id="recoge">
+    <div class="lg:grid lg:min-h-screen lg:grid-cols-12">
+      <section class="relative flex h-32 items-end bg-gray-900 lg:col-span-5 lg:h-full xl:col-span-6">
+        <img alt="Night" src="images/formulario_recogida.jpg"
+          class="absolute inset-0 h-full w-full object-cover opacity-60" />
 
-      <div class="hidden lg:relative lg:block lg:p-12">
-        <a class="block text-white" href="/">
-          <span class="sr-only">Home</span>
-          <svg
-            class="h-8 sm:h-10"
-            viewBox="0 0 28 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M0.41 10.3847C1.14777 7.4194 2.85643 4.7861 5.2639 2.90424C7.6714 1.02234 10.6393 0 13.695 0C16.7507 0 19.7186 1.02234 22.1261 2.90424C24.5336 4.7861 26.2422 7.4194 26.98 10.3847H25.78C23.7557 10.3549 21.7729 10.9599 20.11 12.1147C20.014 12.1842 19.9138 12.2477 19.81 12.3047H19.67C19.5662 12.2477 19.466 12.1842 19.37 12.1147C17.6924 10.9866 15.7166 10.3841 13.695 10.3841C11.6734 10.3841 9.6976 10.9866 8.02 12.1147C7.924 12.1842 7.8238 12.2477 7.72 12.3047H7.58C7.4762 12.2477 7.376 12.1842 7.28 12.1147C5.6171 10.9599 3.6343 10.3549 1.61 10.3847H0.41ZM23.62 16.6547C24.236 16.175 24.9995 15.924 25.78 15.9447H27.39V12.7347H25.78C24.4052 12.7181 23.0619 13.146 21.95 13.9547C21.3243 14.416 20.5674 14.6649 19.79 14.6649C19.0126 14.6649 18.2557 14.416 17.63 13.9547C16.4899 13.1611 15.1341 12.7356 13.745 12.7356C12.3559 12.7356 11.0001 13.1611 9.86 13.9547C9.2343 14.416 8.4774 14.6649 7.7 14.6649C6.9226 14.6649 6.1657 14.416 5.54 13.9547C4.4144 13.1356 3.0518 12.7072 1.66 12.7347H0V15.9447H1.61C2.39051 15.924 3.154 16.175 3.77 16.6547C4.908 17.4489 6.2623 17.8747 7.65 17.8747C9.0377 17.8747 10.392 17.4489 11.53 16.6547C12.1468 16.1765 12.9097 15.9257 13.69 15.9447C14.4708 15.9223 15.2348 16.1735 15.85 16.6547C16.9901 17.4484 18.3459 17.8738 19.735 17.8738C21.1241 17.8738 22.4799 17.4484 23.62 16.6547ZM23.62 22.3947C24.236 21.915 24.9995 21.664 25.78 21.6847H27.39V18.4747H25.78C24.4052 18.4581 23.0619 18.886 21.95 19.6947C21.3243 20.156 20.5674 20.4049 19.79 20.4049C19.0126 20.4049 18.2557 20.156 17.63 19.6947C16.4899 18.9011 15.1341 18.4757 13.745 18.4757C12.3559 18.4757 11.0001 18.9011 9.86 19.6947C9.2343 20.156 8.4774 20.4049 7.7 20.4049C6.9226 20.4049 6.1657 20.156 5.54 19.6947C4.4144 18.8757 3.0518 18.4472 1.66 18.4747H0V21.6847H1.61C2.39051 21.664 3.154 21.915 3.77 22.3947C4.908 23.1889 6.2623 23.6147 7.65 23.6147C9.0377 23.6147 10.392 23.1889 11.53 22.3947C12.1468 21.9165 12.9097 21.6657 13.69 21.6847C14.4708 21.6623 15.2348 21.9135 15.85 22.3947C16.9901 23.1884 18.3459 23.6138 19.735 23.6138C21.1241 23.6138 22.4799 23.1884 23.62 22.3947Z"
-              fill=""
-            />
-          </svg>
-        </a>
-
-        <h2 class="mt-6 text-2xl font-bold text-white sm:text-3xl md:text-4xl">
-          Recogida de baSuras
-        </h2>
-
-        <p class="mt-4 leading-relaxed text-white/90">
-          El reciclaje es una práctica individual que, sin embargo, adoptada por millones de personas a la vez puede generar enormes beneficios para el planeta.
-        </p>
-      </div>
-    </section>
-
-    <main
-      class="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:px-16 lg:py-12 xl:col-span-6"
-    >
-      <div class="max-w-xl lg:max-w-3xl">
-        <div class="relative -mt-16 block lg:hidden">
-          <a
-            class="inline-flex h-16 w-16 items-center justify-center rounded-full bg-white text-blue-600 sm:h-20 sm:w-20"
-            href="/"
-          >
+        <div class="hidden lg:relative lg:block lg:p-12">
+          <a class="block text-white" href="/">
             <span class="sr-only">Home</span>
-            <svg
-              class="h-8 sm:h-10"
-              viewBox="0 0 28 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <svg class="h-8 sm:h-10" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M0.41 10.3847C1.14777 7.4194 2.85643 4.7861 5.2639 2.90424C7.6714 1.02234 10.6393 0 13.695 0C16.7507 0 19.7186 1.02234 22.1261 2.90424C24.5336 4.7861 26.2422 7.4194 26.98 10.3847H25.78C23.7557 10.3549 21.7729 10.9599 20.11 12.1147C20.014 12.1842 19.9138 12.2477 19.81 12.3047H19.67C19.5662 12.2477 19.466 12.1842 19.37 12.1147C17.6924 10.9866 15.7166 10.3841 13.695 10.3841C11.6734 10.3841 9.6976 10.9866 8.02 12.1147C7.924 12.1842 7.8238 12.2477 7.72 12.3047H7.58C7.4762 12.2477 7.376 12.1842 7.28 12.1147C5.6171 10.9599 3.6343 10.3549 1.61 10.3847H0.41ZM23.62 16.6547C24.236 16.175 24.9995 15.924 25.78 15.9447H27.39V12.7347H25.78C24.4052 12.7181 23.0619 13.146 21.95 13.9547C21.3243 14.416 20.5674 14.6649 19.79 14.6649C19.0126 14.6649 18.2557 14.416 17.63 13.9547C16.4899 13.1611 15.1341 12.7356 13.745 12.7356C12.3559 12.7356 11.0001 13.1611 9.86 13.9547C9.2343 14.416 8.4774 14.6649 7.7 14.6649C6.9226 14.6649 6.1657 14.416 5.54 13.9547C4.4144 13.1356 3.0518 12.7072 1.66 12.7347H0V15.9447H1.61C2.39051 15.924 3.154 16.175 3.77 16.6547C4.908 17.4489 6.2623 17.8747 7.65 17.8747C9.0377 17.8747 10.392 17.4489 11.53 16.6547C12.1468 16.1765 12.9097 15.9257 13.69 15.9447C14.4708 15.9223 15.2348 16.1735 15.85 16.6547C16.9901 17.4484 18.3459 17.8738 19.735 17.8738C21.1241 17.8738 22.4799 17.4484 23.62 16.6547ZM23.62 22.3947C24.236 21.915 24.9995 21.664 25.78 21.6847H27.39V18.4747H25.78C24.4052 18.4581 23.0619 18.886 21.95 19.6947C21.3243 20.156 20.5674 20.4049 19.79 20.4049C19.0126 20.4049 18.2557 20.156 17.63 19.6947C16.4899 18.9011 15.1341 18.4757 13.745 18.4757C12.3559 18.4757 11.0001 18.9011 9.86 19.6947C9.2343 20.156 8.4774 20.4049 7.7 20.4049C6.9226 20.4049 6.1657 20.156 5.54 19.6947C4.4144 18.8757 3.0518 18.4472 1.66 18.4747H0V21.6847H1.61C2.39051 21.664 3.154 21.915 3.77 22.3947C4.908 23.1889 6.2623 23.6147 7.65 23.6147C9.0377 23.6147 10.392 23.1889 11.53 22.3947C12.1468 21.9165 12.9097 21.6657 13.69 21.6847C14.4708 21.6623 15.2348 21.9135 15.85 22.3947C16.9901 23.1884 18.3459 23.6138 19.735 23.6138C21.1241 23.6138 22.4799 23.1884 23.62 22.3947Z"
-                
-              />
+                fill="" />
             </svg>
           </a>
 
-          <h1
-            class="mt-2 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl"
-          >
-            Formulario Recogida de basuras
-          </h1>
+          <h2 class="mt-6 text-2xl font-bold text-white sm:text-3xl md:text-4xl">
+            Recogida de baSuras
+          </h2>
 
-          <p class="mt-4 leading-relaxed text-gray-500">
-            El reciclaje es una práctica individual que, sin embargo, adoptada por millones de personas a la vez puede generar enormes beneficios para el planeta.
+          <p class="mt-4 leading-relaxed text-white/90">
+            El reciclaje es una práctica individual que, sin embargo, adoptada por millones de personas a la vez puede
+            generar enormes beneficios para el planeta.
           </p>
         </div>
+      </section>
 
-        <form action="#" class="mt-8 grid grid-cols-6 gap-6">
-          <div class="col-span-6 sm:col-span-3">
-            <label
-              for="FirstName"
-              class="block text-sm font-medium text-gray-700"
-            >
-              Nombres
-            </label>
+      <main class="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:px-16 lg:py-12 xl:col-span-6">
+        <div class="max-w-xl lg:max-w-3xl">
+          <div class="relative -mt-16 block lg:hidden">
+            <a class="inline-flex h-16 w-16 items-center justify-center rounded-full bg-white text-blue-600 sm:h-20 sm:w-20"
+              href="/">
+              <span class="sr-only">Home</span>
+              <svg class="h-8 sm:h-10" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M0.41 10.3847C1.14777 7.4194 2.85643 4.7861 5.2639 2.90424C7.6714 1.02234 10.6393 0 13.695 0C16.7507 0 19.7186 1.02234 22.1261 2.90424C24.5336 4.7861 26.2422 7.4194 26.98 10.3847H25.78C23.7557 10.3549 21.7729 10.9599 20.11 12.1147C20.014 12.1842 19.9138 12.2477 19.81 12.3047H19.67C19.5662 12.2477 19.466 12.1842 19.37 12.1147C17.6924 10.9866 15.7166 10.3841 13.695 10.3841C11.6734 10.3841 9.6976 10.9866 8.02 12.1147C7.924 12.1842 7.8238 12.2477 7.72 12.3047H7.58C7.4762 12.2477 7.376 12.1842 7.28 12.1147C5.6171 10.9599 3.6343 10.3549 1.61 10.3847H0.41ZM23.62 16.6547C24.236 16.175 24.9995 15.924 25.78 15.9447H27.39V12.7347H25.78C24.4052 12.7181 23.0619 13.146 21.95 13.9547C21.3243 14.416 20.5674 14.6649 19.79 14.6649C19.0126 14.6649 18.2557 14.416 17.63 13.9547C16.4899 13.1611 15.1341 12.7356 13.745 12.7356C12.3559 12.7356 11.0001 13.1611 9.86 13.9547C9.2343 14.416 8.4774 14.6649 7.7 14.6649C6.9226 14.6649 6.1657 14.416 5.54 13.9547C4.4144 13.1356 3.0518 12.7072 1.66 12.7347H0V15.9447H1.61C2.39051 15.924 3.154 16.175 3.77 16.6547C4.908 17.4489 6.2623 17.8747 7.65 17.8747C9.0377 17.8747 10.392 17.4489 11.53 16.6547C12.1468 16.1765 12.9097 15.9257 13.69 15.9447C14.4708 15.9223 15.2348 16.1735 15.85 16.6547C16.9901 17.4484 18.3459 17.8738 19.735 17.8738C21.1241 17.8738 22.4799 17.4484 23.62 16.6547ZM23.62 22.3947C24.236 21.915 24.9995 21.664 25.78 21.6847H27.39V18.4747H25.78C24.4052 18.4581 23.0619 18.886 21.95 19.6947C21.3243 20.156 20.5674 20.4049 19.79 20.4049C19.0126 20.4049 18.2557 20.156 17.63 19.6947C16.4899 18.9011 15.1341 18.4757 13.745 18.4757C12.3559 18.4757 11.0001 18.9011 9.86 19.6947C9.2343 20.156 8.4774 20.4049 7.7 20.4049C6.9226 20.4049 6.1657 20.156 5.54 19.6947C4.4144 18.8757 3.0518 18.4472 1.66 18.4747H0V21.6847H1.61C2.39051 21.664 3.154 21.915 3.77 22.3947C4.908 23.1889 6.2623 23.6147 7.65 23.6147C9.0377 23.6147 10.392 23.1889 11.53 22.3947C12.1468 21.9165 12.9097 21.6657 13.69 21.6847C14.4708 21.6623 15.2348 21.9135 15.85 22.3947C16.9901 23.1884 18.3459 23.6138 19.735 23.6138C21.1241 23.6138 22.4799 23.1884 23.62 22.3947Z" />
+              </svg>
+            </a>
 
-            <input
-              type="text"
-              id="FirstName"
-              name="first_name"
-              class="mt-1 w-full rounded-md border p-2 rounded bg-white text-sm text-gray-700 shadow-sm"
-            />
+            <h1 class="mt-2 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
+              Formulario Recogida de basuras
+            </h1>
+
+            <p class="mt-4 leading-relaxed text-gray-500">
+              El reciclaje es una práctica individual que, sin embargo, adoptada por millones de personas a la vez puede
+              generar enormes beneficios para el planeta.
+            </p>
           </div>
 
-          <div class="col-span-6 sm:col-span-3">
-            <label
-              for="LastName"
-              class="block text-sm font-medium text-gray-700"
-            >
-              Apellidos
-            </label>
-
-            <input
-              type="text"
-              id="LastName"
-              name="last_name"
-              class="mt-1 w-full rounded-md border p-2 rounded bg-white text-sm text-gray-700 shadow-sm"
-            />
-          </div>
-
-          <div class="col-span-6">
-            <label for="Email" class="block text-sm font-medium text-gray-700">
-              Correo electronico
-            </label>
-
-            <input
-              type="email"
-              id="Email"
-              name="email"
-              class="mt-1 w-full rounded-md border p-2 rounded bg-white text-sm text-gray-700 shadow-sm"
-            />
-          </div>
-          <div class="col-span-6 sm:col-span-3">
-          <label
-              for="telefono"
-              class="block text-sm font-medium text-gray-700"
-            >
-              Numero de telefono
-            </label>
-
-            <input
-              type="number"
-              id="telefono"
-              name="telefono"
-              class="mt-1 w-full rounded-md border p-2 rounded bg-white text-sm text-gray-700 shadow-sm"
-            />
-            </div>
+          <form action="#" class="mt-8 grid grid-cols-6 gap-6">
             <div class="col-span-6 sm:col-span-3">
-            <label for="seleccionar">Tipo de basura:</label>
-            <select id="seleccionar" name="opcion" class="w-full border p-2 rounded">
-              <option value="Residuos Sólidos">Residuos Sólidos</option>
-              <option value="Basura Orgánica">Basura Orgánica</option>
-              <option value="Plástico">Plástico</option>
-              <option value="Vidrio">Vidrio</option>
-            </select>
+              <label for="FirstName" class="block text-sm font-medium text-gray-700">
+                Nombres
+              </label>
+
+              <input type="text" id="FirstName" name="first_name"
+                class="mt-1 w-full rounded-md border p-2 rounded bg-white text-sm text-gray-700 shadow-sm" />
+            </div>
+
+            <div class="col-span-6 sm:col-span-3">
+              <label for="LastName" class="block text-sm font-medium text-gray-700">
+                Apellidos
+              </label>
+
+              <input type="text" id="LastName" name="last_name"
+                class="mt-1 w-full rounded-md border p-2 rounded bg-white text-sm text-gray-700 shadow-sm" />
             </div>
 
             <div class="col-span-6">
-              <label
-              for="cantidad"
-              class="block text-sm font-medium text-gray-700"
-            >
-              Cantidad
-            </label>
+              <label for="Email" class="block text-sm font-medium text-gray-700">
+                Correo electronico
+              </label>
 
-            <input
-              type="text"
-              id="cantidad"
-              name="cantidad"
-              class="mt-1 w-full rounded-md border p-2 rounded bg-white text-sm text-gray-700 shadow-sm"
-            />
+              <input type="email" id="Email" name="email"
+                class="mt-1 w-full rounded-md border p-2 rounded bg-white text-sm text-gray-700 shadow-sm" />
+            </div>
+            <div class="col-span-6 sm:col-span-3">
+              <label for="telefono" class="block text-sm font-medium text-gray-700">
+                Numero de telefono
+              </label>
+
+              <input type="number" id="telefono" name="telefono"
+                class="mt-1 w-full rounded-md border p-2 rounded bg-white text-sm text-gray-700 shadow-sm" />
+            </div>
+            <div class="col-span-6 sm:col-span-3">
+              <label for="seleccionar">Tipo de basura:</label>
+              <select id="seleccionar" name="opcion" class="w-full border p-2 rounded">
+                <option value="Residuos Sólidos">Residuos Sólidos</option>
+                <option value="Basura Orgánica">Basura Orgánica</option>
+                <option value="Plástico">Plástico</option>
+                <option value="Vidrio">Vidrio</option>
+              </select>
+            </div>
+
+            <div class="col-span-6">
+              <label for="cantidad" class="block text-sm font-medium text-gray-700">
+                Cantidad
+              </label>
+
+              <input type="text" id="cantidad" name="cantidad"
+                class="mt-1 w-full rounded-md border p-2 rounded bg-white text-sm text-gray-700 shadow-sm" />
 
             </div>
 
-          <div class="col-span-6">
-            <label for="MarketingAccept" class="flex gap-4">
-              <input
-                type="checkbox"
-                id="MarketingAccept"
-                name="marketing_accept"
-                class="h-5 w-5 rounded-md border-gray-200 bg-white shadow-sm"
-              />
+            <div class="col-span-6">
+              <label for="MarketingAccept" class="flex gap-4">
+                <input type="checkbox" id="MarketingAccept" name="marketing_accept"
+                  class="h-5 w-5 rounded-md border-gray-200 bg-white shadow-sm" />
 
-              <span class="text-sm text-gray-700">
-                Quiero recibir correos electrónicos sobre eventos, actualizaciones de productos y anuncios de la empresa.
-              </span>
-            </label>
-          </div>
+                <span class="text-sm text-gray-700">
+                  Quiero recibir correos electrónicos sobre eventos, actualizaciones de productos y anuncios de la
+                  empresa.
+                </span>
+              </label>
+            </div>
 
 
-          <div class="col-span-6 sm:flex sm:items-center sm:gap-4">
-            <button
-              class="inline-block shrink-0 rounded-md border border-blue-600 bg-green-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500"
-            >
-              Enviar
-            </button>
-          </div>
-        </form>
-      </div>
-    </main>
-  </div>
-</section>
-</section>
-<!-- fin formulario recogida -->
+            <div class="col-span-6 sm:flex sm:items-center sm:gap-4">
+              <button
+                class="inline-block shrink-0 rounded-md border border-blue-600 bg-green-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500">
+                Enviar
+              </button>
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+  </section>
+  </section>
+  <!-- fin formulario recogida -->
 
-<!-- seccion de comentarios -->
+  <!-- seccion de comentarios -->
   <section class="bg-white">
     <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-      <h2
-        class="text-center text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl"
-      >
-      Lea las opiniones de confianza de nuestros clientes
+      <h2 class="text-center text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+        Lea las opiniones de confianza de nuestros clientes
       </h2>
-  
+
       <div class="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8">
         <blockquote class="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
           <div class="flex items-center gap-4">
-            <img
-              alt="Man"
+            <img alt="Man"
               src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
-              class="h-14 w-14 rounded-full object-cover"
-            />
-  
+              class="h-14 w-14 rounded-full object-cover" />
+
             <div>
               <div class="flex justify-center gap-0.5 text-green-500">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                  />
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                 </svg>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                  />
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                 </svg>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                  />
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                 </svg>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                  />
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                 </svg>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                  />
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                 </svg>
               </div>
-  
+
               <p class="mt-0.5 text-lg font-medium text-gray-900">Carlos perez</p>
             </div>
           </div>
-  
+
           <p class="mt-4 text-gray-700">
-            He tenido la oportunidad de utilizar el servicio de reciclaje de esta página web y estoy encantado con los resultados. El proceso de reciclaje es sencillo y eficiente.
+            He tenido la oportunidad de utilizar el servicio de reciclaje de esta página web y estoy encantado con los
+            resultados. El proceso de reciclaje es sencillo y eficiente.
           </p>
         </blockquote>
-  
+
         <blockquote class="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
           <div class="flex items-center gap-4">
-            <img
-              alt="Man"
-              src="images/imagen_opi.jpg"
-              class="h-14 w-14 rounded-full object-cover"
-            />
-  
+            <img alt="Man" src="images/imagen_opi.jpg" class="h-14 w-14 rounded-full object-cover" />
+
             <div>
               <div class="flex justify-center gap-0.5 text-green-500">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                  />
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                 </svg>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                  />
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                 </svg>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                  />
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                 </svg>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                  />
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                 </svg>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                  />
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                 </svg>
               </div>
-  
+
               <p class="mt-0.5 text-lg font-medium text-gray-900">Esteban Lopez</p>
             </div>
           </div>
-  
+
           <p class="mt-4 text-gray-700">
-           Mi mundo verde  ha cambiado mi perspectiva sobre el reciclaje! Su enfoque innovador y amigable con el usuario hace que sea fácil y gratificante cuidar de nuestro planeta.
+            Mi mundo verde ha cambiado mi perspectiva sobre el reciclaje! Su enfoque innovador y amigable con el usuario
+            hace que sea fácil y gratificante cuidar de nuestro planeta.
           </p>
         </blockquote>
-  
+
         <blockquote class="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
           <div class="flex items-center gap-4">
-            <img
-              alt="Man"
-              src="images/imagen_opi2.jpg"
-              class="h-14 w-14 rounded-full object-cover"
-            />
-  
+            <img alt="Man" src="images/imagen_opi2.jpg" class="h-14 w-14 rounded-full object-cover" />
+
             <div>
               <div class="flex justify-center gap-0.5 text-green-500">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                  />
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                 </svg>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                  />
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                 </svg>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                  />
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                 </svg>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                  />
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                 </svg>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                  />
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                 </svg>
               </div>
-  
+
               <p class="mt-0.5 text-lg font-medium text-gray-900">Lorena Hernandez</p>
             </div>
           </div>
-  
+
           <p class="mt-4 text-gray-700">
-            Estoy impresionada por la variedad de recursos educativos que mi mundo verde ofrece. Aprendí mucho sobre la importancia del reciclaje y cómo hacerlo de manera efectiva.
+            Estoy impresionada por la variedad de recursos educativos que mi mundo verde ofrece. Aprendí mucho sobre la
+            importancia del reciclaje y cómo hacerlo de manera efectiva.
           </p>
         </blockquote>
       </div>
@@ -880,7 +781,7 @@
 
   <!-- end info section -->
 
- <script src="script.js"></script>
+  <script src="script.js"></script>
   <script>
     // JavaScript para mostrar y ocultar el select al hacer clic en el label
     const labelServicios = document.getElementById('labelServicios');
